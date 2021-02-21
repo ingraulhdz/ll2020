@@ -89,7 +89,7 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://laravel.com/docs">Pagina en Desarrollo</a>
+                    <a href="https://laravel.com/docs">Sistem en Desarrollo</a>
                    
                 </div>
             </div>
