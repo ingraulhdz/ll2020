@@ -34,7 +34,7 @@ class ProjectController extends Controller
                 FROM donations 
                 WHERE project_id=".$id."
                 Group by fecha
-                ORDER BY created_at DESC
+                ORDER BY fecha DESC
                 LIMIT 6 
                 ");
 
