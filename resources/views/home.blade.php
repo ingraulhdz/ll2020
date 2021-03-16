@@ -304,6 +304,8 @@ if(data.projectProgress[2]){
 
 
 
+},error: function(data){
+    console.log(data);
   }
     });
 

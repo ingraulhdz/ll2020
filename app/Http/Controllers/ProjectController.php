@@ -132,7 +132,11 @@ class ProjectController extends Controller
 
 
 
-public function getDataDashboard(){
+public function getDataDashboard()
+{
+
+    try{
+
 
                     $projectProgress = \DB::select("
                     SELECT  advance AS progress, name AS name
@@ -232,6 +236,21 @@ public function getDataDashboard(){
                         
 
                     ]);
+
+
+
+
+       }catch(\Exception $e){
+
+        $messageError = "Someting is worng: ".$e->getMessage();
+           return $messageError;
+    }
+
+
+
+
+
+
 }
 
 
