@@ -150,7 +150,7 @@ public function getDataDashboard()
                 SELECT  SUM(amount) AS total,CONCAT(monthName(created_at)) AS fecha
                 FROM donations 
                 Group by fecha
-                ORDER BY created_at ASC
+                ORDER BY fecha ASC
                 LIMIT 6 
                 ");
 
