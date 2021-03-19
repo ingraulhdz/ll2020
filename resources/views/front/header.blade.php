@@ -17,7 +17,7 @@
 <!-- Custom styles for this template-->
 
 
-<link href="/css//sbadmin/sb-admin-2.min.css" rel="stylesheet">
+<link href="/css/sbadmin/sb-admin-2.min.css" rel="stylesheet">
 <link href="/css/toastr.min.css" rel="stylesheet">
 <link href="/css/fontawesome/css/all.min.css" rel="stylesheet" type="text/css">
 
