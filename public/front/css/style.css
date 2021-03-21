@@ -95,13 +95,25 @@ label {
     padding: 0;
     margin: -2px 0 12px 0;
 }
+.bg-slide {
+    -webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
+    filter: brightness(70%);
+}
 
 .loga a {
     display: block;
 }
+.loga a:link {
+    text-decoration: none;
+}
+
+.loga a:visited {
+    text-decoration: none;
+}
+
 .loga a h1 {
     font-weight: bold;
-    font-size: 20px;
+    font-size: 25px;
     color: #efa52c;
     font-family: "Ballingtone-Shadow";
     text-align: center;
@@ -113,23 +125,30 @@ label {
     font-weight: bold;
 }
 .loga p {
-    font-size: 0.2em;
+    font-size: 11px;
     color: #efa52c;
     letter-spacing: 3px;
+    font-family: "PoiretOne-Regular";
+
     padding: 0;
     margin: -2px 0 12px 0;
     text-align: center;
 }
-.bg-slide {
-    -webkit-filter: grayscale(20%); /* Safari 6.0 - 9.0 */
-    filter: brightness(70%);
-}
+
 .loga2 a {
     display: block;
 }
+.loga2 a:link {
+    text-decoration: none;
+}
+
+.loga2 a:visited {
+    text-decoration: none;
+}
+
 .loga2 a h1 {
     font-weight: bold;
-    font-size: 30px;
+    font-size: 25px;
     color: #efa52c;
     font-family: "Ballingtone-Shadow";
     text-align: center;
@@ -137,13 +156,15 @@ label {
 .loga2 a span {
     color: #fff;
     font-family: "Ballingtone-Shadow";
-    font-size: 25px;
+    font-size: 16px;
     font-weight: bold;
 }
 .loga2 p {
-    font-size: 0.2em;
+    font-size: 11px;
     color: #efa52c;
     letter-spacing: 3px;
+    font-family: "PoiretOne-Regular";
+
     padding: 0;
     margin: -2px 0 12px 0;
     text-align: center;

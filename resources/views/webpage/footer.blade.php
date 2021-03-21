@@ -11,12 +11,13 @@
             <!--//logo2-->
             <!-- <p class="float-end"><a href="#">Back to top</a></p> -->
 
-            <a href="single.html" class="flag_tag2">Siguenos</a>
+            <p class="flag_tag2">Siguenos</p>
             <ul class="social wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s">
                 <li><a href="https://www.facebook.com/LaLomaMexico" class="btn btn-primary btn-xl"> Facebook</a></li>
-                <li><a href="https://www.facebook.com/LaLomaMexico" class="btn btn-danger btn-xl"> instagram</a></li>
+                <li><a href="https://www.facebook.com/LaLomaMexico" class="btn btn-danger btn-xl"> Instagram</a></li>
                 <div class="clearfix"></div>
             </ul>
+            <br>
             <p class="copy-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
                 &copy; 2020 La Loma, Acambay, Estado de Mexico. &middot; <a href="#">Privacy</a> &middot; <a
                     href="#">Terms</a> </p>
