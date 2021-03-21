@@ -19,7 +19,7 @@ use App\Http\Controllers\ProjectController;
 // use App\Http\Controllers\TicketController;
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('webpage.welcome');
 });
 Route::get('/mitest', [ProjectController::class, 'mitest'])->name('mitest');
 
