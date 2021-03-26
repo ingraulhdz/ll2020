@@ -27,6 +27,8 @@
             </div>
 @include('front.menu')
 
+            @include('modal_donate')
+
 
             <!-- Divider -->
             <hr class="sidebar-divider d-none d-md-block">
@@ -36,13 +38,7 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-         <div class="card-body">         
-
-
-
-            @include('modal_donate')
-    </div>
-
+     
 
 
 
