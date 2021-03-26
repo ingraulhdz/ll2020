@@ -174,10 +174,10 @@ public function getDataDashboard()
 
 
                 $division =     DB::select(" 
-                SELECT Projects.id, Projects.name as name, SUM(donations.amount) AS tot
-                FROM  Projects INNER JOIN  donations
+                SELECT projects.id, projects.name as name, SUM(donations.amount) AS tot
+                FROM  projects INNER JOIN  donations
                 ON Projects.id=donations.project_id
-                GROUP BY Projects.id, Projects.name
+                GROUP BY projects.id, projects.name
                 ");
 
 
