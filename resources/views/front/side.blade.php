@@ -5,7 +5,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-church"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">AC<sup>2021</sup></div>
+                <div class="sidebar-brand-text mx-3">La Loma<sup>2020</sup></div>
             </a>
 
             <!-- Divider -->
