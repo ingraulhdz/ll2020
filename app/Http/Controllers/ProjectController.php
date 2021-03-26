@@ -176,7 +176,7 @@ public function getDataDashboard()
                 $division =     DB::select(" 
                 SELECT projects.id, projects.name as name, SUM(donations.amount) AS tot
                 FROM  projects INNER JOIN  donations
-                ON Projects.id=donations.project_id
+                ON projects.id=donations.project_id
                 GROUP BY projects.id, projects.name
                 ");
 
