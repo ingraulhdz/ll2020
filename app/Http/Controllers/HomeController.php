@@ -54,9 +54,9 @@ class HomeController extends Controller
 
    $donations = Donation::get();
     $division =     DB::select(" 
-    SELECT projects.id, rojects.name, SUM(donations.amount) AS TOTALAMOUNT
+    SELECT projects.id, projects.name, SUM(donations.amount) AS TOTALAMOUNT
     FROM  projects INNER JOIN  donations
-    ON rojects.id=donations.project_id
+    ON projects.id=donations.project_id
     GROUP BY projects.id, projects.name
 ");
    
