@@ -47,7 +47,6 @@ Route::middleware(['auth'])->group(function () {
    require __DIR__ . '/Activity_logRoutes.php';
    require __DIR__ . '/UserRoutes.php';
    require __DIR__ . '/RoleRoutes.php';
-   require __DIR__ . '/Permissionroute.php';
    
 
 
