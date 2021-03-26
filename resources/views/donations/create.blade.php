@@ -5,18 +5,28 @@
 
 
 <div class="card shadow mb-4">
+    
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Donar al proyecto {{$project->name}}</h6>
-    </div>
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Donate')}}</h6>
+          
+<a href="{{route('donations.index')}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span class="text">{{__('Back')}}</span>
+                    </a>
+                                                </div>
+                        </div>
+                        
     <div class="card-body">         
 
 
 
-    <form action="{{route('donations.store')}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('donations.store')}}" method="POST" enctype="multipart/form-data">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
-<input type="hidden" name="project_id" value="{{ $project->id}}">
- <small for="inlineFormInputGroup">Cantidad</small>
-
+<input type="hidden" id="id" name="project_id" value="{{ $project->id }}">
+<small for="inlineFormInputGroup">Cantidad</small>
 
 <input type="text" class="form-control @if ($errors->any()) {{$errors->has('amount') ? 'is-invalid':'is-valid'}} @endif" id="amount" name="amount" placeholder="Cantidad" value="{{ old('amount') }}" required="true">
   {!! $errors->first('amount','<div class="invalid-feedback">:message        </div>') !!}

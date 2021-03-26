@@ -32,6 +32,7 @@
 <link href="/front/css/iconeffects.css" rel='stylesheet' type='text/css' />
 <link href="/front/css/style.css" rel='stylesheet' type='text/css' />	
 <link rel="stylesheet" href="/front/css/swipebox.css">
+<link href="/css/toastr.min.css" rel="stylesheet">
 
 <script src="/js/vendor/jquery/jquery.min.js"></script>
 
@@ -201,6 +202,17 @@
 								<!--end-smooth-scrolling-->
 		<a href="#home" id="toTop" class="scroll" style="display: block;"> 
 			<span id="toTopHover" style="opacity: 1;"> </span></a>
+@include('front.alert')
 
+        <script >
+          toastr["error"](message+"</small> ", "check the follows errors")
+/*Swal.fire({
+  type: 'error',
+  title: 'Oops... Please check the errors',
+  html: message
+})
+
+*/
+    </script>
 </body>
 </html>

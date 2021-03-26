@@ -44,17 +44,22 @@
                                     <form method="POST" action="{{ route('login') }}" class="user">
                         @csrf                                     
                            <div class="form-group">
-                                                              <input id="email" type="email" placeholder="Correo electronico"  aria-describedby="emailHelp"class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
-
+          <input id="username" type="text" placeholder="User name or Email"  aria-describedby="emailHelp"class="form-control form-control-user @error('email') is-invalid @enderror @error('username') is-invalid @enderror" name="login" value="{{ old('username') ?: old('email') }}" required autocomplete="username" autofocus>
+  
+                                @error('username')
+                               <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
                                 @error('email')
-                                    <span class="invalid-feedback" role="alert">
+                               <span class="invalid-feedback" role="alert">
                                         <strong>{{ $message }}</strong>
                                     </span>
                                 @enderror
                                         </div>
                                         <div class="form-group">
                                          
-                                                     <input id="password" placeholder="Password" type="password" class="form-control l form-control-user @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+                                                     <input id="password" placeholder="Password" type="password" class="form-control l form-control-user @error('email') is-invalid @enderror  @error('usernmae') is-invalid @enderror " name="password" required autocomplete="current-password">
 
                                 @error('password')
                                     <span class="invalid-feedback" role="alert">

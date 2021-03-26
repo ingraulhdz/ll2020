@@ -11,23 +11,21 @@
                    
 
 
-
-
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h6 class="h3 mb-0 font-weight-bold text-primary">Donaciones</h6>
-                               
-                                <!-- <a href="{{route('donations.create')}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-success btn-icon-split">
+                                <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Donations')}}</h6>
+            
+<a href="/home" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
                         <span class="icon text-white-50">
-                            <i class="fas fa-plus"></i>
+                            <i class="fas fa-arrow-left"></i>
                         </span>
-                        <span class="text">Agregar</span>
-                    </a> -->
-
-                            </div>
+                        <span class="text">{{__('Back')}}</span>
+                    </a>
+                                                </div>
                         </div>
+                        
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -46,32 +44,30 @@
                                     @foreach($donations as $donation)                       
 
                                         <tr>
-                                        <td> <a href="{{ route('donations.show', $donation)}}" > {{$donation->id}}</a></td>
+                                        <td> <a href="{{ route('donations.show', $donation)}}" ># 00{{$donation->id}}</a></td>
                     
                                         <td>{{$donation->supporter->fullname()}}</td>
-                      <td>$ {{$donation->amount}} MXN</td>
-                      <td>{{$donation->project->name}}</td>
+                      <td>$ {{number_format($donation->amount)}}</td>
+                      <td>{{$donation->project->name ?? ''}} </td>
                                             <td>
                            
-<form action="{{route('donations.destroy', $donation)}}" method="POST">
-     <input type="hidden" name="_method" value="DELETE">
-   <input type="hidden" name="_token" value="{{ csrf_token() }}">
-   @if($donation->status)        <button type="submit">            
-   <a href="#" class="d-none  btn btn-danger btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                </a></buttom>
-                                                @else<button type="submit">
-                                                <a href="#" class="d-none  btn btn-success btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-check"></i>
-                                                </a></buttom>
-                                                @endif
 
-                                               
-                                                </form> 
-                                                <button type="">            
-   <a href="{{route('donations.edit' , $donation)}}" class="d-none  btn btn-info btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-edit"></i>
-                                                </a></buttom>
+    <button class='btn btn-sm btn-primary btn-circle edit'  type="submit" value=''>
+                                             <a href="{{route('donations.edit', $donation)}}">
+                                                 <i class="fas fa-edit text-gray-100 "></i>
+
+                                             </a>
+                                         </button>
+
+                                
+    <button class='btn btn-sm btn-success btn-circle edit'  type="submit" value=''>
+                                             <a href="{{route('donations.show', $donation)}}">
+                                                 <i class="fas fa-eye text-gray-100 "></i>
+
+                                             </a>
+                                         </button>
+
+                                
                                             </td>
                                         </tr>
                                  

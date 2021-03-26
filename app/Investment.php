@@ -29,4 +29,11 @@ class Investment extends Model
 
             }
 
+            
+              public function accounts()
+            {
+                return $this->hasMany('App\Account');
+            }
+
+
 }

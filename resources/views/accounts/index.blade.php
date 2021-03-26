@@ -17,17 +17,25 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h6 class="h3 mb-0 font-weight-bold text-primary">Cuentas</h6>
-                               
+                                <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Accounts')}}</h6>
+                               @can('accounts.create')
                                 <a href="{{route('accounts.create')}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
                         <span class="text">Agregar</span>
                     </a>
+@endcan
 
-                            </div>
+<a href="/home" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span class="text">{{__('Back')}}</span>
+                    </a>
+                                                </div>
                         </div>
+                        
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -49,28 +57,51 @@
                  
                                         <td>{{$account->bank}}</td>
                                         <td>{{$account->country}}</td>
+                                                                         
                                             <td>
-                           
+@can('accounts.delete')
 <form action="{{route('accounts.destroy', $account)}}" method="POST">
      <input type="hidden" name="_method" value="DELETE">
    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-   @if($account->status)        <button type="submit">            
-   <a href="#" class="d-none  btn btn-danger btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                </a></buttom>
-                                                @else<button type="submit">
-                                                <a href="#" class="d-none  btn btn-success btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-check"></i>
-                                                </a></buttom>
+   @if($account->status)      
+
+   <button class='btn btn-sm btn-danger btn-circle edit'  type="submit" value=''>
+                                             <a href="">
+                                                 <i class="fas fa-times text-gray-100 "></i>
+
+                                             </a>
+                                         </button>
+
+   
+                                                @else
+                                                
+   <button class='btn btn-sm btn-success btn-circle edit' value=''>
+                                             <a href="">
+                                                 <i class="fas fa-plus text-gray-100 "></i>
+
+                                             </a>
+                                         </button>
                                                 @endif
 
                                                
+                                                @endcan
+
+                                                 @can('acoounts.edit')
+                                             <a href="{{route('accounts.edit' , $account)}}" class='btn btn-sm btn-info btn-circle edit'>
+                                                 <i class="fas fa-edit text-gray-100 "></i>
+
+                                             </a>
+  
+
+
+                                             @endcan
+
+                                             <a href="{{route('accounts.show' , $account)}}"  class='btn btn-sm btn-primary btn-circle edit' >
+                                                 <i class="fas fa-eye text-gray-100 "></i>
+
+                                             </a>
                                                 </form> 
-                                                <button type="">            
-   <a href="{{route('accounts.edit' , $account)}}" class="d-none  btn btn-info btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-edit"></i>
-                                                </a></buttom>
-                                            
+
                                             </td>
                                             </td>
                                         </tr>

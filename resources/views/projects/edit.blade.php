@@ -30,7 +30,8 @@
  
       <small for="inlineFormInputGroup"> Descripcion </small>
   
-        <input type="text" class="form-control @if ($errors->any()) {{$errors->has('description') ? 'is-invalid':'is-valid'}} @endif" id="description" name="description" placeholder="Descripcion general del proyecto" value="{{ $project->description}}" required="true">
+        <textarea  type="text" class="form-control @if ($errors->any()) {{$errors->has('description') ? 'is-invalid':'is-valid'}} @endif" id="description" name="description" placeholder="Descripcion general del proyecto" value="{{ $project->description}}" required="true">
+</textarea >
                    {!! $errors->first('description','<div class="invalid-feedback">:message        </div>') !!}
 
                    <small > Avance</small>
@@ -72,7 +73,7 @@
 <select class="form-control @if ($errors->any()) {{$errors->has('account_id') ? 'is-invalid':'is-valid'}} @endif" id="account_id" name="account_id"  value="{{ $project->account_id }}" >
                         <option value=""  >Seleciona una cuenta para deposito</option>
 
-                        @foreach(App\Account::get() as $item)
+                        @foreach(App\Models\Account::get() as $item)
 
 <option value="{{$item->id}}" @if($item->id == $project->account_id ) selected  @endif >
 <small>{{ $item->owner }} | {{ $item->bank }} </small></option>

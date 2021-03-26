@@ -34,6 +34,8 @@ class UserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+                    'username' => 'required|string|min:4|max:255|unique:users',
+
         ]);
     }
 
@@ -72,15 +74,20 @@ class UserController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
+         'username' => 'required|string|min:4|max:20|unique:users',
+
   ]);
 		try{
 
-          $user=   User::create([
-                'name' => $data['name'],
-                'email' => $data['email'],
-                'password' => Hash::make($data['password']),
-            ]);
+          $user=  new User();
 
+                 $user->name = $request->name;
+                 $user->username = $request->username;
+                 $user->email = $request->email;
+                 $user->username = $request->username;
+                 $user->password = Hash::make($request->password);
+        
+$user->save();
             $user->assignRole('guest');
             
 
@@ -89,13 +96,54 @@ class UserController extends Controller
 
             $messageError = "Someting is worng: ".$e->getMessage();
             \Session::flash('error',$messageError);
-            return \Redirect::back()->withInput()->withErrors($messageError);
+            return ($messageError);
         	}
 
-            $message ='The Role was created!.';
+            $message ='The User has been created!.';
             \Session::flash('message',$message);
              return redirect()->route('users.index');
 	}
+
+
+
+    
+	public function storeFromWeb(Request $request)
+	{ 
+        $data = $this->validate(request(), [
+            'name' => ['required', 'string', 'max:255'],
+            'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
+            'password' => ['required', 'string', 'min:8', 'confirmed'],
+         'username' => 'required|string|min:4|max:20|unique:users',
+
+  ]);
+		try{
+
+          $user=  new User();
+
+                 $user->name = $request->name;
+                 $user->username = $request->username;
+                 $user->email = $request->email;
+                 $user->username = $request->username;
+                 $user->password = Hash::make($request->password);
+        
+$user->save();
+            $user->assignRole('guest');
+            
+
+
+ 		}catch(\Exception $e){
+
+            $messageError = "Someting is worng: ".$e->getMessage();
+            \Session::flash('error',$messageError);
+            return ($messageError);
+        	}
+
+            $message ='The User has been created!.';
+            \Session::flash('message',$message);
+             return redirect()->route('home');
+	}
+
+
 
 
 
@@ -127,6 +175,7 @@ class UserController extends Controller
 
      $data = $this->validate(request(), [
         'name' => 'required|min:2|max:244',
+        'username' => 'required|min:2|max:20',
         'email' => 'required|min:5|max:244',
 
   ]);
@@ -165,8 +214,21 @@ class UserController extends Controller
     public function destroy($id)
 {
 
- $user = User::find($id)->delete();
- $message ='user deleted! ';
+ $user = User::find($id);
+
+
+ if($user->status){
+ $user->status = null;
+$message="User inactive";
+ } 
+else{
+
+$user->status = 1;
+$message ="User active";
+
+}
+
+$user->save();
 
         \Session::flash('message',$message);
 

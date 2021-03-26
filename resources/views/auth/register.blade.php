@@ -59,7 +59,28 @@
                                             placeholder="Last Name">
                                     </div>
                                 </div>
+                                
                                 <div class="form-group">
+                                    <input type="text"id="exampleInputEmail"
+                                        placeholder="phone"  class="form-control form-control-user  @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}" required autocomplete="phone">
+                                         @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror 
+                                </div>
+                                
+                                <div class="form-group">
+                                    <input type="text"id="exampleInputEmail"
+                                        placeholder="Username"  class="form-control form-control-user  @error('username') is-invalid @enderror" name="username" value="{{ old('username') }}" required autocomplete="username">
+                                         @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror 
+                                </div>
+
+                                     <div class="form-group">
                                     <input type="email"id="exampleInputEmail"
                                         placeholder="Email Address"  class="form-control form-control-user  @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email">
                                          @error('email')

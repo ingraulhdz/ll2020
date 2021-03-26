@@ -73,14 +73,28 @@ class PermissionsTableSeeder extends Seeder
          $user = User::find(1); 
          $user->assignRole('Super-Admin');
          $user = User::find(2); 
-         $user->assignRole('guest');
-         
-        //  ->givePermissionTo([
-        //     'tickets.index',
-        //     'tickets.create',
-        //     'tickets.edit',
-        //     'tickets.show',
-        //     'tickets.destroy',
-        //     ]);
+         $user->assignRole('Super-Admin');
+         $user = User::find(3); 
+         $user->assignRole('Super-Admin');
+        
+        $role = Role::find(3); 
+
+         $role->givePermissionTo([
+            'accounts.index',
+            'donations.index',
+            'members.index',
+            'projects.index',
+            'tickets.show',
+             'accounts.show',
+            'donations.show',
+            'members.show',
+            'projects.show',
+            'tickets.show',
+             'investments.index',
+             'investments.show',
+
+           
+            ]);
+                  
     }
 }

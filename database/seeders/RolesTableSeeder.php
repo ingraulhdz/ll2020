@@ -26,7 +26,12 @@ class RolesTableSeeder extends Seeder
                             'front_name' => 'Super Administrator',
                             ]);
 
-
+   Role::create([
+                        'name' => 'admin',
+                        'description' => 'Can manage system  users, projects and modules',
+                        'front_name' => 'Adminsitrator',
+                        ]);
+                        
      
         //Guest
         Role::create([
@@ -58,11 +63,7 @@ class RolesTableSeeder extends Seeder
                     ]);
                 
 
-                    Role::create([
-                        'name' => 'admin',
-                        'description' => 'Can manage system  users, projects and modules',
-                        'front_name' => 'Adminsitrator',
-                        ]);
+                 
                 
                         
                         

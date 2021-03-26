@@ -55,21 +55,29 @@
 <form action="{{route('members.destroy', $member)}}" method="POST">
      <input type="hidden" name="_method" value="DELETE">
    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-   @if($member->status)        <button type="submit">            
-   <a href="#" class="d-none  btn btn-danger btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                </a></buttom>
-                                                @else<button type="submit">
-                                                <a href="#" class="d-none  btn btn-success btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-check"></i>
-                                                </a></buttom>
-                                                @endif                                                </form> 
+   @if($member->status)         <button class='btn btn-sm btn-danger btn-circle edit'  type="submit" value=''>
+                                             <a href="">
+                                                 <i class="fas fa-times text-gray-100 "></i>
 
-                                                <button type="">            
-   <a href="{{route('members.edit' , $member)}}" class="d-none  btn btn-info btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-edit"></i>
-                                                </a></buttom>
-                                            
+                                             </a>
+                                         </button>
+                                                @else
+                                                 <button class='btn btn-sm btn-success btn-circle edit'  type="submit" value=''>
+                                             <a href="">
+                                                 <i class="fas fa-check text-gray-100 "></i>
+
+                                             </a>
+                                         </button>
+
+                                                @endif                                                
+
+                                             <a class='btn btn-sm btn-primary btn-circle edit' href="{{route('members.edit', $member)}}">
+                                                 <i class="fas fa-eye text-gray-100 "></i>
+
+                                             </a>
+
+                                                                                            </form> 
+
 
                                             </td>
                                         </tr>

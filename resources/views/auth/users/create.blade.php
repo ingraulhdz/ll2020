@@ -8,15 +8,60 @@
 
 
 <div class="card shadow mb-4">
-    <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Agregar nuevo usuario</h6>
-    </div>
+    
+                         <div class="card-header py-3">
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                                <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Add new User')}}</h6>
+                              
+<a href="{{route('users.index')}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span class="text">{{__('Back')}}</span>
+                    </a>
+                    
+                                                </div>
+                        </div>
+                        
     <div class="card-body">         
 
     <form action="{{route('users.store')}}" method="POST" >
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-@include('auth.users.partials.form')
+
+
+
+<div class="form-group">
+ <small for="inlineFormInputGroup"> {{__('Name')}}</small>
+
+<input type="text" class="form-control @if ($errors->any()) {{$errors->has('name') ? 'is-invalid':'is-valid'}} @endif" id="name" name="name" placeholder="{{__('Full Name')}}" value="{{ old('name') }}" required="true">
+    @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+
+<div class="form-group">
+ <small for="inlineFormInputGroup"> {{__('Username')}}</small>
+
+<input type="text" class="form-control @if ($errors->any()) {{$errors->has('username') ? 'is-invalid':'is-valid'}} @endif" id="username" name="username" placeholder="{{__('username')}}" value="{{ old('username') }}" required="true">
+    @error('username')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
+
+	<div class="form-group">
+ <small for="inlineFormInputGroup"> {{__('E-mail')}}</small>
+ <input type="text" class="form-control @if ($errors->any()) {{$errors->has('email') ? 'is-invalid':'is-valid'}} @endif" id="email" name="email" placeholder="example@mail.com" value="{{ old('email') }}" required="true">
+    @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+
 
 
 <div class="form-group">

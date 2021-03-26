@@ -36,14 +36,14 @@
                 <button class="rounded-circle border-0" id="sidebarToggle"></button>
             </div>
 
-            <!-- Sidebar Message -->
-            <div class="sidebar-card">
-                <img class="sidebar-card-illustration mb-2" src="/img/sbadmin/undraw_rocket.svg" alt="">
-                <p class="text-center mb-2"><strong>La Loma Renovacion</strong> Es un proyecto Para renovacion de La Lona</p>
-             Donate
+         <div class="card-body">         
 
 
-            </div> 
+
+            @include('modal_donate')
+    </div>
+
+
 
 
         </ul>

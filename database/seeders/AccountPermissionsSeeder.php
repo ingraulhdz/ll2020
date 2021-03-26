@@ -67,6 +67,8 @@ class AccountPermissionsSeeder extends Seeder
 
                             ]);
 
+                
+
 
     }
 }

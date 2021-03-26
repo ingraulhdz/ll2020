@@ -1,6 +1,6 @@
 
     <header>
-        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark">
+        <nav class="navbar navbar-expand-md navbar-dark fixed-top bg-dark" >
             <div class="container-fluid">
                 <!-- <a class="navbar-brand" href="#">Carousel</a> -->
                 <!--logo-->
@@ -32,7 +32,7 @@
                         </li>
 
                         <li class="nav-item">
-                            <a class="nav-link" data-hover="Proyectos" href="#activities" class="scroll">Proyectos</a>
+                            <a class="nav-link" data-hover="Proyectos" href="#projects" class="scroll">Proyectos</a>
                         </li>
 
 

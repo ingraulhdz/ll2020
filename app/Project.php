@@ -33,6 +33,13 @@ class Project extends Model
                 return $this->hasMany('App\Member');
             }
 
+            
+              public function accounts()
+            {
+                return $this->hasMany('App\Models\Account');
+            }
+
+
             public function director()
             {
                 return $this->belongsTo('App\Member');
@@ -53,7 +60,7 @@ class Project extends Model
 
             public function account()
             {
-                return $this->belongsTo('App\Account');
+                return $this->belongsTo('App\Models\Account');
             }
 
             public function topDonations()

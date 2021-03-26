@@ -7,6 +7,15 @@
 	</div>
 
 
+<div class="form-group">
+ <small for="inlineFormInputGroup"> {{__('Username')}}</small>
+
+<input type="text" class="form-control @if ($errors->any()) {{$errors->has('username') ? 'is-invalid':'is-valid'}} @endif" id="username" name="username" placeholder="{{__('username')}}" value="{{ $user->username ?? '' }}" required="true">
+ {!! $errors->first('description','
+	<div class="invalid-feedback">:message        </div>') !!}
+	</div>
+
+
 	<div class="form-group">
  <small for="inlineFormInputGroup"> {{__('E-mail')}}</small>
  <input type="text" class="form-control @if ($errors->any()) {{$errors->has('e-mail') ? 'is-invalid':'is-valid'}} @endif" id="email" name="email" placeholder="example@mail.com" value="{{ $user->email ?? '' }}" required="true">

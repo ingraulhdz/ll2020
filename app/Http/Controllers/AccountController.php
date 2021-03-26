@@ -2,7 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Account;
+use App\Models\User;
+use App\Models\Account;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -11,8 +12,16 @@ class AccountController extends Controller
 
     public function index()
     {
+$user = User::find(auth()->user()->id);
+
+if($user->hasPermissionTo('accounts.delete') || $user->hasRole('Super-Admin')){
         $accounts = Account::orderBy('id', 'ASC')->get();
+
         return view('accounts.index', compact('accounts'));
+
+}else{
+        $accounts = Account::where('status', 1)->orderBy('id', 'ASC')->get();
+        return view('accounts.index', compact('accounts'));}
     }
 
 
@@ -99,16 +108,17 @@ class AccountController extends Controller
 
  $item = Account::findOrFail($id);
 
- if($item->status){
-$item->status = 0;
-$message="account inactive";
+  if($item->status){
+$item->status = null;
+$message="Account inactive";
 }
 else{
 
 $item->status = 1;
-$message ="account active";
+$message ="Account active";
 
 }
+
 
  $item->save();
         \Session::flash('message',$message);

@@ -22,11 +22,11 @@ class DatabaseSeeder extends Seeder
         //  $this->call(UsersTableSeeder::class);
     //$this->call(ProductsTableSeeder::class);
     $this->call(RolesTableSeeder::class);
-    $this->call(PermissionsTableSeeder::class);
     $this->call(MemberTableSeeder::class);
     $this->call(ProjectPermissionsSeeder::class);
     $this->call(DonationPermissionsSeeder::class);
     $this->call(TicketPermissionsSeeder::class);
+    $this->call(InvestmentPermissionsSeeder::class);
     $this->call(MemberPermissionsSeeder::class);
     $this->call(AccountPermissionsSeeder::class);
     $this->call(UserPermissionsSeeder::class);
@@ -34,6 +34,7 @@ class DatabaseSeeder extends Seeder
     Member::factory(50)->create();
     Donation::factory(50)->create();
     Investment::factory(20)->create();
+    $this->call(PermissionsTableSeeder::class);
 
         // factory(App\Investment::class,1500)->create();
 

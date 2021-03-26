@@ -1,5 +1,8 @@
 
             <!-- Nav Item - Pages Collapse Menu -->
+
+            @can('user.index')
+
             <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseAdmin"
                     aria-expanded="true" aria-controls="collapseAdmin">
@@ -12,11 +15,10 @@
                         <a class="collapse-item"  href="{{ route('users.index')}}">Users</a>
                         <a class="collapse-item"  href="{{ route('roles.index')}}">Roles</a>
                         <a class="collapse-item"  href="{{ route('permissions.index')}}">Permissions</a>
-                        <a class="collapse-item"  href="{{ route('products.index')}}">Products</a>
                     </div>
                 </div>
             </li>
-
+@endcan
 
 <li class='nav-item'>
                 <a class='nav-link' href="{{ route('accounts.index')}}">

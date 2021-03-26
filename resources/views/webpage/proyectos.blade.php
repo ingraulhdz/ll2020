@@ -1,9 +1,19 @@
             <div class="row featurette" id="projects">
-                <div class="col-md-12 order-md-2 ab-text two">
+               
+                  <div class="col-md-12 order-md-2 ab-text two">
 
-                <h3 class="tittle">Proyectos</h3>
-                <div class="arrows-serve"><img src="front/images/border.png" alt="border"></div>
-                </div>
+                <h3 class="tittle wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s">Proyectos</h3>
+                    <div class="arrows-two wow slideInDown" data-wow-duration="1s" data-wow-delay=".5s"><img
+                            src="front/images/border.png" alt="border" /></div>
+
+                <p class="wow slideInUp" data-wow-duration="1s" data-wow-delay=".3s">
+              Disfruta de nuestra gastronomica, actividades al aire libre, feria, y mucho mas
+
+</div>
+
+
+
+
                 <div class="inst-grids">
 
                     <div class="row">
@@ -69,6 +79,9 @@
                             <h3>Juegos para Ninos</h3>
                         </div>
 
+
+
                     </div>
                 </div>
+                
             </div>

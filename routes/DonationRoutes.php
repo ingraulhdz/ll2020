@@ -9,6 +9,7 @@ use App\Http\Controllers\DonationController;
 
 
 //donation routes
+Route::get('monitor', [DonationController::class, 'monitor'])->name('monitor');
 
 Route::get('donations', [DonationController::class, 'index'])->name('donations.index')->middleware('permission:donations.index');
 Route::get('donations/create', [DonationController::class, 'create'])->name('donations.create')->middleware('permission:donations.create');

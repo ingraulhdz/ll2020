@@ -308,8 +308,10 @@ return view ('activity_logs.index', compact('activityLogs' ,'project'));
                         return view('investments.create', compact('project'));
                     }
 
+
                     public function donate(Request $request)
                     {
+                        dd();
 
                         $data = $this->validate(request(), [
                             //             'name' => 'required|min:2|max:244',
@@ -344,6 +346,8 @@ return view ('activity_logs.index', compact('activityLogs' ,'project'));
                                         \Session::flash('message',$message);
                                         return redirect()->route('projects.index');
                     }
+
+
                     public function store(Request $request)
                     { 
                         $data = $this->validate(request(), [
@@ -444,7 +448,7 @@ return view ('activity_logs.index', compact('activityLogs' ,'project'));
 $item = Project::findOrFail($id);
 
 if($item->status){
-$item->status = 0;
+$item->status = null;
 $message="project inactive";
 }
 else{

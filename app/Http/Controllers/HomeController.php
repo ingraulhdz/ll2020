@@ -37,6 +37,7 @@ class HomeController extends Controller
     
    public function home()
    {    
+       
    $route = \Route::currentRouteName();
     $members = Member::get();
     $investments = Investment::get();
@@ -51,13 +52,14 @@ class HomeController extends Controller
       ->get()->take(3);
 
 
-    $donations = Donation::get();
+   $donations = Donation::get();
     $division =     DB::select(" 
     SELECT Projects.id, Projects.name, SUM(donations.amount) AS TOTALAMOUNT
     FROM  Projects INNER JOIN  donations
     ON Projects.id=donations.project_id
     GROUP BY Projects.id, Projects.name
 ");
+   
 
 
     

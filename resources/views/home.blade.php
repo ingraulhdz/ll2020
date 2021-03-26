@@ -1,4 +1,4 @@
-@extends('front.main')
+@extends('main')
 @section('css')
 <link href="/backend/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 
@@ -9,9 +9,10 @@
 <input type="hidden" name="_token" value="{{ csrf_token() }}" id="token">
   
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard </h1>
-                        <a href="#" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-download fa-sm text-white-50"></i> Generar  Reporte</a>
+                        <h1 class="h3 mb-0 text-gray-600">Dashboard </h1>
+                        <h3 class="h3 mb-0 text-primary">Welcome {{auth::user()->name}} </h3>
+                        <a href="{{route('monitor')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
+                                class="fas fa-desktop fa-sm text-white-50"></i> Monitorear</a>
                     </div>
 
                     <!-- Content Row -->
@@ -61,7 +62,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
                                                 Total Donado </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> $ {{$donations->sum('amount')}}</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> $ {{number_format($donations->sum('amount'))}}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-arrow-up fa-2x text-gray-300"></i>
@@ -79,7 +80,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 Total Invertido</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> $ {{$investments->sum('amount')}}</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> $ {{number_format($investments->sum('amount'))}}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-arrow-down fa-2x text-gray-300"></i>
@@ -316,8 +317,8 @@ if(data.projectProgress[2]){
 </script>
 <script src="backend/vendor/chart.js/Chart.min.js"></script>
 
-<script src="backend/js/demo/donationsByMonth.js"></script>
-<script src="backend/js/demo/topDonations.js"></script>
-<script src="backend/js/demo/investmentsDistribution.js"></script>  
+<script src="js/charts/home/donationsByMonth.js"></script>
+<script src="js/charts/home/topDonations.js"></script>
+<script src="js/charts/home/investmentsDistribution.js"></script>  
 
 @endsection

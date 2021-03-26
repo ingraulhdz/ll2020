@@ -11,19 +11,34 @@
                    
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
-                        <div class="card-header py-3">
+                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h6 class="h3 mb-0 font-weight-bold text-primary">Users</h6>
-                               
+                                <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Users')}}</h6>
+                               @can('users.create')
                                 <a href="{{route('users.create')}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
                         <span class="text">Agregar</span>
                     </a>
+@endcan
 
-                            </div>
+<a href="/home" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span class="text">{{__('Assignar')}}</span>
+                    </a>
+<a href="/home" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span class="text">{{__('Back')}}</span>
+                    </a>
+                    
+                                                </div>
                         </div>
+                        
                         <div class="card-body">
                             <div class="table-responsive">
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
@@ -46,32 +61,58 @@
                  
                     <td> <a href="{{ route('users.show', $user)}}" > {{$user->name}}</a></td>
                       <td>{{$user->email}}</td>
-                      <td>{{$user->id}}</td>
-                      <td>{{$user->id}}</td>
-
-                      <td>{{$user->id}}</td>
+                      <td>{{$user->username}}</td>
+                      <td>{{ $user->roles[0]->name ?? 'Unasigned Role'}}</td>
+<td>
+    @if($user->status == 1)
+    Active
+    @elseif($user->status == 0)
+     inactive
+    @endif
 <td>
                            
 <form action="{{route('users.destroy', $user)}}" method="POST">
      <input type="hidden" name="_method" value="DELETE">
    <input type="hidden" name="_token" value="{{ csrf_token() }}">
-   @if($user->status)        <button type="submit">            
-   <a href="#" class="d-none  btn btn-danger btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-trash"></i>
-                                                </a></buttom>
-                                                @else<button type="submit">
-                                                <a href="#" class="d-none  btn btn-success btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-check"></i>
-                                                </a></buttom>
-                                                @endif
-                                                </form> 
+    @if($user->status == 1)
+   
+   <button class='btn btn-sm btn-danger btn-circle edit'  type="submit" value=''>
+                                             <a href="{{route('users.delete', $user)}}">
+                                                 <i class="fas fa-times text-gray-100 "></i>
 
-                                                <button type="">            
-   <a href="{{route('users.edit' , $user)}}" class="d-none  btn btn-info btn-circle d-sm-inline-block  btn-sm  shadow-sm">
-                                                    <i class="fas fa-edit"></i>
-                                                </a></buttom>
+                                             </a>
+                                         </button>
+
+
+    @elseif($user->status == 0)
+                                                <button class='btn btn-sm btn-success btn-circle edit'  type="submit" value=''>
+                                             <a href="{{route('users.delete', $user)}}">
+                                                 <i class="fas fa-plus text-gray-100 "></i>
+
+                                             </a>
+                                         </button>
+                                                @endif
+@can('users.edit')
+
+                                             <a href="{{route('users.edit', $user)}}" class='btn btn-sm btn-info btn-circle edit'  >
+
+                                                 <i class="fas fa-edit text-gray-100 "></i>
+
+                                                                          </a>
+
                                             
-                                            </td>
+@endcan
+@can('users.show')
+                                             <a href="{{route('users.show', $user)}}" class='btn btn-sm btn-primary btn-circle edit' >
+
+                                                 <i class="fas fa-eye text-gray-100 "></i>
+
+                                                                                     </a>
+
+                                         @endcan
+
+
+                                                </form> 
 
                                             </td>
                                         </tr>

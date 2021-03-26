@@ -30,10 +30,6 @@ Auth::routes();
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'home'])->name('home');
 
 
-Route::resource('users', UserController::class);
-Route::resource('roles', RoleController::class);
-Route::resource('permissions', PermissionController::class);
-Route::resource('products', ProductController::class);
 
 
 Route::middleware(['auth'])->group(function () {
@@ -49,6 +45,9 @@ Route::middleware(['auth'])->group(function () {
    require __DIR__ . '/TicketRoutes.php';
    require __DIR__ . '/CategoryExpenseRoutes.php';
    require __DIR__ . '/Activity_logRoutes.php';
+   require __DIR__ . '/UserRoutes.php';
+   require __DIR__ . '/RoleRoutes.php';
+   require __DIR__ . '/Permissionroute.php';
    
 
 
