@@ -41,10 +41,10 @@ class DonationController extends Controller
 
    $donations = Donation::get();
     $division =     DB::select(" 
-    SELECT Projects.id, Projects.name, SUM(donations.amount) AS TOTALAMOUNT
-    FROM  Projects INNER JOIN  donations
-    ON Projects.id=donations.project_id
-    GROUP BY Projects.id, Projects.name
+    SELECT projects.id, projects.name, SUM(donations.amount) AS TOTALAMOUNT
+    FROM  projects INNER JOIN  donations
+    ON projects.id=donations.project_id
+    GROUP BY projects.id, projects.name
 ");
    
 
