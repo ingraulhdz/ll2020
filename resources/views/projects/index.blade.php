@@ -45,7 +45,6 @@
                       <th>Descripcion</th>
                       <th>Acumulado</th>
                       <th>Invertido</th>
-                      <th>Status</th>
                       <th>Options</th>
                  
                     </tr>
@@ -59,9 +58,8 @@
                       <td>{{$project->description}}</td>
                       <td>${{ number_format($project->donations->where('project_id',$project->id)->sum('amount')) }}</td>
 
-                      <td>$ {{number_format($project->investments->where('project_id',$project->id)->sum('amount'))}} MXN</td>
+                      <td>$ {{number_format($project->investments->where('project_id',$project->id)->sum('amount'))}}</td>
 
-                      <td>{{$project->description}}</td>
                       
 <td>
                            
@@ -70,28 +68,40 @@
    <input type="hidden" name="_token" value="{{ csrf_token() }}">
    @if($project->status)
 
-     <button class='btn btn-sm btn-danger btn-circle edit'  type="submit" value=''>
+   <button class='btn btn-sm btn-danger btn-circle edit'  type="submit" value=''>
                                              <a href="">
                                                  <i class="fas fa-times text-gray-100 "></i>
 
                                              </a>
                                          </button>
 
+   
                                                 @else
-<button class='btn btn-sm btn-success btn-circle edit'  type="submit" value=''>
+                                                
+   <button class='btn btn-sm btn-success btn-circle edit' value=''>
                                              <a href="">
-                                                 <i class="fas fa-check text-gray-100 "></i>
+                                                 <i class="fas fa-plus text-gray-100 "></i>
 
                                              </a>
-                                         </button>                                               
-
+                                         </button>
                                                 @endif
 
-                                                                                     <a href="{{route('projects.edit', $project)}}" class='btn btn-sm btn-primary btn-circle edit'  value=''>
+                                               
 
+                                                 @can('projects.edit')
+                                             <a href="{{route('projects.edit' , $project)}}" class='btn btn-sm btn-primary btn-circle edit'>
                                                  <i class="fas fa-edit text-gray-100 "></i>
 
-                                                                              </a>
+                                             </a>
+  
+
+
+                                             @endcan
+
+                                             <a href="{{route('projects.show' , $project)}}"  class='btn btn-sm btn-success btn-circle edit' >
+                                                 <i class="fas fa-eye text-gray-100 "></i>
+
+                                             </a>
                                                 </form> 
 
                                             
