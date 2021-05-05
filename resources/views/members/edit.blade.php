@@ -10,7 +10,7 @@
     <div class="card-body">  
 
 
-<form action="{{route('members.update', $member)}}" method="POST" enctype="multipart/form-data">
+<form action="{{route('members.update', $member)}}" method="POST" class="user" enctype="multipart/form-data">
 
 <input type="hidden" name="_method" value="PUT">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -20,7 +20,7 @@
 
 <small > Foto </small>
    
-   <input type="file" class="form-control @if ($errors->any()) {{$errors->has('image') ? 'is-invalid':'is-valid'}} @endif" id="image" name="image" placeholder="Fist photo" value="{{ $member->image}}" >
+   <input type="file" class="form-control  @if ($errors->any()) {{$errors->has('image') ? 'is-invalid':'is-valid'}} @endif" id="image" name="image" placeholder="Fist photo" value="{{ $member->image}}" >
    {!! $errors->first('image','<div class="invalid-feedback">:message        </div>') !!}
 
 

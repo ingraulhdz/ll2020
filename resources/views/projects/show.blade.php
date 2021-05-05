@@ -2,14 +2,20 @@
 
 @section('content')
 <input type="hidden" id="id" value="{{ $project->id }}">
-
-
-<div class="col-xl-12 col-lg-12">
-                            <div class="card shadow mb-4">
-                              <div class="card-header py-3">
+    <div class="card shadow mb-4">
+                        <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                             <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Project ')}}</h6>
-          
+                                <h6 class="h3 mb-0 font-weight-bold text-primary">{{$project->name}}</h6>
+                              
+                        <a href="{{route('projects.investment', $project->id)}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-warning btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-arrow-down"></i>
+                        </span>
+                        <span class="text">{{__('Gastos')}}</span>
+                    </a>
+  
+                              
+                               
 <a href="{{route('projects.donar', $project->id)}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-arrow-up"></i>
@@ -17,44 +23,9 @@
                         <span class="text">{{__('Donar')}}</span>
                     </a>
 
-                    <a href="{{route('projects.investment', $project->id)}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-warning btn-icon-split">
-                        <span class="icon text-white-50">
-                            <i class="fas fa-arrow-down"></i>
-                        </span>
-                        <span class="text">{{__('Expenses')}}</span>
-                    </a>
-
-                       @if($project->planning)
-
-<a href="{{route('projects.downloadPlanning', $project->id)}}" class="dropdown-item" >Download planing</a>
-                                      @endif
-
-                                      
-                             <div class="dropdown no-arrow">
-                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
-                                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                            <i class="fas fa-ellipsis-v fa-sm fa-fw text-gray-400"></i>
-                                        </a> 
-                                         <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
-                                            aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Options:</div>
-                                            <a class="dropdown-item" href="{{route('projects.activity', $project->id)}}">{{__('Activy Log')}}</a>
-                                            <a class="dropdown-item" href="{{route('projects.donar', $project->id)}}">{{__('Donate')}}</a>
-                                            <a class="dropdown-item" href="{{route('projects.investment', $project->id)}}">{{__('Expenses')}}</a>
-                                            <div class="dropdown-divider"></div>
-                                            @if($project->planning)
-
-<a href="{{route('projects.downloadPlanning', $project->id)}}" class="dropdown-item" >Download planing</a>
-                                      @endif
-                                        </div> 
-                                    </div>
-
 
                             </div>
-
-                            
                         </div>
-                                    
 
 
 
@@ -330,7 +301,6 @@
                             <tr>
                                 <th>Donante</th>
                                 <th>Cantidad</th>
-                                <th>Fecha</th>
                           
                             </tr>
                         </thead>
@@ -340,10 +310,9 @@
                                         <!-- <a href="{{ route('investments.show', $item->id)}}" > -->
                                                  <tr >
                                             
-                                        <td>{{$item->supporter->name}}</td>
-                                        <td>${{$item->amount}} MXN</td>
-<td>                                        {{Carbon\Carbon::parse($item->created_at)->locale('es_MX')->isoFormat('LLLL')}}</li>
-</td>
+                                        <td><a href="{{ route('donations.show', $item->id)}}" > {{$item->supporter->name}}</a></td>
+                                        <td>$ {{number_format($item->amount)}} MXN</td>
+
                                         </tr>
                                         @endforeach
                           
@@ -373,9 +342,8 @@
                         <thead>
                             <tr>
                                 <th>Gasto</th>
-                                <th>CAntidad</th>
-                                <th>CAtegoria</th>
-                                <th>Fecha</th>
+                                <th>Cantidad</th>
+                                <th>Categoria</th>
                           
                             </tr>
                         </thead>
@@ -387,9 +355,8 @@
                                         <td><a href="{{ route('investments.show', $item->id)}}" >
                                         {{$item->name}}</a></td>
                                         <td>{{$item->category->name}} </td>
-                                        <td>${{$item->amount}} MXN</td>
-<td>                                        {{Carbon\Carbon::parse($item->created_at)->locale('es_MX')->isoFormat('LLLL')}}</li>
-</td>
+                                        <td>{{number_format($item->amount)}} MXN</td>
+
                                         </tr>
                                         @endforeach
                           
@@ -416,14 +383,11 @@
 
 
 
-                                <!--ends  Card Body -->
 
                                 </div>
                             </div>
-                        </div>
 
 
-                        <!-- Illustrations -->
                        
 
 @endsection

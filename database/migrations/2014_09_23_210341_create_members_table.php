@@ -16,11 +16,11 @@ class CreateMembersTable extends Migration
         Schema::create('members', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');            
-            $table->string('email')->nullable();
-            $table->string('photo')->nullable();
-
+            $table->string('email')->unique()->nullable();
+            $table->string('phone')->unique()->nullable();
+            $table->string('nickname')->nullable();
             $table->string('last_name')->nullable();
-            $table->string('phone')->nullable();
+            $table->string('photo')->nullable();
             $table->boolean('status')->default(1);   
             $table->softDeletes();
 

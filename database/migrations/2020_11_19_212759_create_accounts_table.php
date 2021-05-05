@@ -17,7 +17,6 @@ class CreateAccountsTable extends Migration
             $table->bigIncrements('id');
             $table->string('owner');
             $table->string('country')->nullable();
-
             $table->string('bank')->nullable();
             $table->string('card')->nullable();
             $table->string('account_number')->nullable();
@@ -52,7 +51,7 @@ class CreateAccountsTable extends Migration
 
                      DB::table('accounts')->insert([
             'owner' => 'Abel Hernanez',
-            'country' => 'Mexico',  
+            'country' => 'MX',  
             'bank' => 'Bancomer',  
             'card' => '6233-4332-6232-7833',  
             'account_number' => '9832498374',  

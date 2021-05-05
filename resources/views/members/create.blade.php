@@ -4,29 +4,87 @@
 @section('content')
 <div class="card shadow mb-4">
     <div class="card-header py-3">
-        <h6 class="m-0 font-weight-bold text-primary">Agregar nuevo proyecto</h6>
-    </div>
+       
+                            <div class="d-sm-flex align-items-center justify-content-between mb-4">
+                             <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Add Member')}}</h6>
+          
+<a href="{{route('members.index')}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-arrow-left"></i>
+                        </span>
+                        <span class="text">{{__('Back')}}</span>
+                    </a>
+
+                 
+                            </div>
+                        </div>
     <div class="card-body">         
 
 
-            <form action="{{route('members.store')}}" method="POST" >
+            <form action="{{route('members.store')}}" method="POST" class="user">
             <input type="hidden" name="_token" value="{{ csrf_token() }}">
 
-            <small for="inlineFormInputGroup">Nombre</small>
-            <input type="text" class="form-control @if ($errors->any()) {{$errors->has('name') ? 'is-invalid':'is-valid'}} @endif" id="name" name="name" placeholder="Nombre" value="{{ old('name') }}" required="true">
-              {!! $errors->first('name','<div class="invalid-feedback">:message        </div>') !!}
+          <div class="form-group row">
 
-            <small for="inlineFormInputGroup">Apellido</small>
-            <input type="text" class="form-control @if ($errors->any()) {{$errors->has('last_name') ? 'is-invalid':'is-valid'}} @endif" id="last_name" name="last_name" placeholder="Apellido " value="{{ old('last_name') }}" required="true">
-            {!! $errors->first('last_name','<div class="invalid-feedback">:message        </div>') !!}
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <input type="text" id="exampleFirstName"
+                                            placeholder="First Name" class="form-control form-control-user @error('name') is-invalid @enderror" name="name" value="{{ old('name') }}" required autocomplete="name" autofocus>
+                                                 @error('name')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                    </div>
 
-            <small for="inlineFormInputGroup">Telefono </small>
-            <input type="text" class="form-control @if ($errors->any()) {{$errors->has('phone') ? 'is-invalid':'is-valid'}} @endif" id="phone" name="phone" placeholder="Telefono" value="{{ old('phone') }}" required="true">
-            {!! $errors->first('phone','<div class="invalid-feedback">:message        </div>') !!}
+            
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <input type="text" id="exampleFirstName"
+                                            placeholder="Last Name" class="form-control form-control-user @error('lastname') is-invalid @enderror" name="lastname" value="{{ old('lastname') }}" required autocomplete="lastname" >
+                                                 @error('lastname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                    </div>
 
-            <small for="inlineFormInputGroup">Email </small>
-            <input type="text" class="form-control @if ($errors->any()) {{$errors->has('email') ? 'is-invalid':'is-valid'}} @endif" id="email" name="email" placeholder="Email" value="{{ old('email') }}" required="true">
-            {!! $errors->first('email','<div class="invalid-feedback">:message        </div>') !!}
+                                    
+                                    <div class="col-sm-4 mb-3 mb-sm-0">
+                                        <input type="text" id="exampleFirstName"
+                                            placeholder="Nickname" class="form-control form-control-user @error('nickname') is-invalid @enderror" name="nickname" value="{{ old('nickname') }}"  autocomplete="nickname" >
+                                                 @error('nickname')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                    </div>
+                                    </div>
+
+
+
+          <div class="form-group row">
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" id="exampleFirstName"
+                                            placeholder="E-mail" class="form-control form-control-user @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}"  autocomplete="email" >
+                                                 @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                    </div>
+
+            
+                                    <div class="col-sm-6 mb-3 mb-sm-0">
+                                        <input type="text" id="exampleFirstName"
+                                            placeholder="Phone" class="form-control form-control-user @error('phone') is-invalid @enderror" name="phone" value="{{ old('phone') }}"  autocomplete="phone" >
+                                                 @error('phone')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                                    </div>
+
+
+
 
 </div>
 <div class="card-footer">         

@@ -37,7 +37,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 {{__('Donaciones')}}</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">87</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800">  {{number_format($donations->sum('id'))}}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -54,7 +54,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
                                                 {{__('Acumulado')}}</div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$12,900</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> $ {{number_format($donations->sum('amount'))}}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-dollar-sign fa-2x text-gray-300"></i>
@@ -71,7 +71,7 @@
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
                                                 {{__('Investment')}} </div>
-                                            <div class="h5 mb-0 font-weight-bold text-gray-800">$ 18,089</div>
+                                            <div class="h5 mb-0 font-weight-bold text-gray-800"> $ {{number_format($investments->sum('amount'))}}</div>
                                         </div>
                                         <div class="col-auto">
                                             <i class="fas fa-arrow-down fa-2x text-gray-300"></i>
@@ -190,17 +190,16 @@
                                     </thead>
                                
                                     <tbody>
-                                        <tr>
-                                            <td>Jose Perez</td>
-                                            <td>$1, 234</td>
-                                            <td>Primaria</td>
+                                    @foreach($donations as $donation)
+                                    <tr>
+                                            <td>{{$donation->supporter->name}}</td>
+                                            <td>{{$donation->amount}}</td>
+                                            <td>{{$donation->project->name}}</td>
+                                      
 </tr>
 
-                 <tr>
-                                            <td>Jorge Ruiz</td>
-                                            <td>$123</td>
-                                            <td>Centro</td>
-</tr>
+                                    @endforeach
+    
 
 </tbody>
 </table>

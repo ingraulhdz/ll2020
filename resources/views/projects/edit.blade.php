@@ -12,7 +12,7 @@
 
 
 
-<form action="{{route('projects.update', $project)}}" method="POST" enctype="multipart/form-data" >
+<form action="{{route('projects.update', $project)}}" method="POST" class="user" enctype="multipart/form-data" >
 
 <input type="hidden" name="_method" value="PUT">
 <input type="hidden" name="_token" value="{{ csrf_token() }}">
@@ -20,24 +20,32 @@
 
 
 
+                                    <div class="col-sm-12 mb-3 mb-sm-2">
 
-      <small > Nombre</small>
    
-        <input type="text" class="form-control @if ($errors->any()) {{$errors->has('name') ? 'is-invalid':'is-valid'}} @endif" id="name" name="name" placeholder="Nombre del proyecto" value="{{ $project->name}}" required="true">
+        <input type="text" class="form-control form-control-user @if ($errors->any()) {{$errors->has('name') ? 'is-invalid':'is-valid'}} @endif" id="name" name="name" placeholder="Nombre del proyecto" value="{{ $project->name}}" required>
         {!! $errors->first('name','<div class="invalid-feedback">:message        </div>') !!}
 
      
- 
-      <small for="inlineFormInputGroup"> Descripcion </small>
+ </div>
+                                    <div class="col-sm-12 mb-3 mb-sm-2">
+
   
-        <textarea  type="text" class="form-control @if ($errors->any()) {{$errors->has('description') ? 'is-invalid':'is-valid'}} @endif" id="description" name="description" placeholder="Descripcion general del proyecto" value="{{ $project->description}}" required="true">
+        <textarea  type="text" class="form-control form-control-user @if ($errors->any()) {{$errors->has('description') ? 'is-invalid':'is-valid'}} @endif" id="description" name="description" placeholder="Descripcion general "  required> {{ $project->description}}
 </textarea >
                    {!! $errors->first('description','<div class="invalid-feedback">:message        </div>') !!}
+ 
+ </div>
+                                    <div class="col-sm-12 mb-3 mb-sm-2">
 
                    <small > Avance</small>
    
-   <input type="number" class="form-control @if ($errors->any()) {{$errors->has('advance') ? 'is-invalid':'is-valid'}} @endif" id="advance" name="advance" placeholder="Avance en % del proyecto" value="{{ $project->advance}}" required="true">
+   <input type="number" class="form-control form-control-user @if ($errors->any()) {{$errors->has('advance') ? 'is-invalid':'is-valid'}} @endif" id="advance" name="advance" placeholder="Avance en % del proyecto" value="{{ $project->advance}}" >
    {!! $errors->first('advance','<div class="invalid-feedback">:message        </div>') !!}
+ 
+ </div>
+ <div class="row">
+                                    <div class="col-sm-4 mb-3 mb-sm-2">
 
 
                    <small for="inlineFormInputGroup">Director del proyecto </small>
@@ -49,6 +57,10 @@
         <option value="{{$item->id}}" @if($item->id == $project->director_id) selected @endif>{{ $item->fullName() }}</option>
         @endforeach
           </select>
+           
+ </div>
+                                    <div class="col-sm-4 mb-3 mb-sm-2">
+
           <small for="inlineFormInputGroup"> Secretario</small>
 
           <select class="form-control @if ($errors->any()) {{$errors->has('secretary_id') ? 'is-invalid':'is-valid'}} @endif" id="secretary_id" name="secretary_id"  value="{{ $project->secretary_id }}" >
@@ -58,6 +70,10 @@
         <option value="{{$item->id}}" @if($item->id == $project->secretary_id) selected @endif>{{ $item->fullName() }}</option>
         @endforeach
           </select>
+           
+ </div>
+                                    <div class="col-sm-4 mb-3 mb-sm-2">
+
           <small for="inlineFormInputGroup"> Tesorero</small>
 
           <select class="form-control @if ($errors->any()) {{$errors->has('treasure_id') ? 'is-invalid':'is-valid'}} @endif" id="treasure_id" name="treasure_id"  value="{{ $project->treasure_id }}" >
@@ -67,6 +83,11 @@
         <option value="{{$item->id}}" @if($item->id == $project->treasure_id) selected @endif >{{ $item->fullName() }}</option>
         @endforeach
           </select>
+ 
+ </div>
+ </div>
+ <div class="row">
+                                    <!-- <div class="col-sm-6 mb-3 mb-sm-2">
 
 <small>Cuenta Bancaria</small>
   
@@ -81,12 +102,10 @@
 @endforeach
       
           </select>
-
  
-          <small for="inlineFormInputGroup">Foto de Portada </small>
-<input type="file" class="form-control @if ($errors->any()) {{$errors->has('photo') ? 'is-invalid':'is-valid'}} @endif" id="photo" name="photo" placeholder="photo" value="{{ old('photo') }}" >
- {!! $errors->first('photo','<div class="invalid-feedback">:message        </div>') !!}
-
+ </div> -->
+                       
+                                    <div class="col-sm-6 mb-3 mb-sm-2">
 
 
           <small for="inlineFormInputGroup">Planeacion </small>
@@ -94,8 +113,8 @@
  {!! $errors->first('planning','<div class="invalid-feedback">:message        </div>') !!}
 
 
-
-
+</div>
+</div>
     
  <hr>
 

@@ -29,8 +29,7 @@ class CreateProjectsTable extends Migration
             $table->integer('secretary_id')->nullable();
             $table->integer('advance')->default(0);   
             $table->boolean('status')->default(1)->nullable();   
-            $table->unsignedBigInteger('account_id')->nullable();;
-                    $table->foreign('account_id')->references('id')->on('accounts')->onDelete('cascade');
+            $table->unsignedBigInteger('accounts')->nullable();;
             
                     $table->softDeletes();
                     $table->timestamps();

@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use App\Models\User;
 use App\Models\Account;
+use App\Investment;
+use App\Donation;
 use Illuminate\Http\Request;
 
 class AccountController extends Controller
@@ -138,7 +140,10 @@ $message ="Account active";
 	{
 
 $account = Account::findOrFail($id);
-return view('accounts.show', compact('account'));
+                    $donations = Donation::where('account_id', $account->id )->orderby('created_at', 'DESC')->get();
+                    $investments = Investment::where('account_id', $account->id )->orderby('created_at', 'DESC')->get();
+
+return view('accounts.show', compact('account', 'donations', 'investments'));
 
 	}
 

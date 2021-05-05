@@ -25,6 +25,8 @@ class InvestmentFactory extends Factory
         return [
             'name' => $this->faker->name,
             'description' => $this->faker->text,
+                        'account_id' => $this->faker->numberBetween($min = 1, $max = 2        ), // 8567 
+
             'voucher' => '/images/projects/1/expenses/1.jpg', 
             'amount' => $this->faker->numberBetween(500,5000),
             'project_id' => $this->faker->numberBetween(1,3,2),

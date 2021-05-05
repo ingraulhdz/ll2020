@@ -26,6 +26,7 @@ class DonationFactory extends Factory
             'amount' => $this->faker->numberBetween(500,10000),
             'project_id' => $this->faker->numberBetween(1,3,2),
             'supporter_id' => $this->faker->numberBetween($min = 1, $max = 50), // 8567 
+            'account_id' => $this->faker->numberBetween($min = 1, $max = 2        ), // 8567 
             'created_at' => $this->faker->dateTimeBetween($startDate = '2020-08-01 19:28:21', $endDate = 'now')
           
           

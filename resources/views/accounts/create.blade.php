@@ -40,7 +40,7 @@
  <select id="country"  name="country" class="form-control-user form-select @if ($errors->any()) {{$errors->has('country') ? 'is-invalid':'is-valid'}} @endif">
  <option value="" class="" selected> Selecciona un Pais</option>
 
- <option value="Mexico" class=""> Mexico</option>
+ <option value="MX" class=""> Mexico</option>
  <option value="USA" class=""> USA</option>
 </select>
 

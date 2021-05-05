@@ -10,7 +10,7 @@
   
 <div class="d-sm-flex align-items-center justify-content-between mb-4">
                         <h1 class="h3 mb-0 text-gray-600">Dashboard </h1>
-                        <h3 class="h3 mb-0 text-primary">Bienvenido {{auth::user()->name}} </h3>
+                        <h3 class="h3 mb-0 text-primary">Welcome {{auth::user()->name}} </h3>
                         <a href="{{route('monitor')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
                                 class="fas fa-desktop fa-sm text-white-50"></i> Monitorear</a>
                     </div>

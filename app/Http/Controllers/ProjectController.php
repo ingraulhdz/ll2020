@@ -352,14 +352,10 @@ return view ('activity_logs.index', compact('activityLogs' ,'project'));
                     { 
                         $data = $this->validate(request(), [
                             'name' => 'required|min:2|max:244',
-                        //  "planning" => "required|mimes:pdf|max:10000",
-
-                            'description' => 'required|min:5|max:244' ]);
+                        "planning" => "mimes:pdf|max:10000",
+                       'description' => 'required|min:5|max:244' ]);
                         try{
-                        // $name = $request->file('planning')->getClientOriginalName();
-                    //$visibility = Storage::getVisibility('file.jpg');
-
-                    //return Storage::download('public\3\planning.pdf');
+                     
 
                             $project = new Project($request->all());
                             $project->save();
@@ -367,6 +363,7 @@ return view ('activity_logs.index', compact('activityLogs' ,'project'));
                             $project->save();
 
                             $request->planning->storeAS('public/'.$project->id, '/planning.pdf');
+ 
 
                             }catch(\Exception $e){
 
@@ -384,6 +381,7 @@ return view ('activity_logs.index', compact('activityLogs' ,'project'));
    public function edit($id)
    {
            $project = Project::findOrFail($id);
+           
            return view('projects.edit', compact('project'));
    }
 

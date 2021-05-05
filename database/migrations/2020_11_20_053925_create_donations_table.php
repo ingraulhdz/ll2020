@@ -18,6 +18,10 @@ class CreateDonationsTable extends Migration
             $table->string('method')->nullable();
             $table->string('voucher')->nullable();
             $table->double('amount', 8, 2); 
+                 $table->unsignedBigInteger('account_id');
+
+            $table->foreign('account_id')->references('id')->on('accounts');
+
             $table->unsignedBigInteger('supporter_id');
 
             $table->foreign('supporter_id')->references('id')->on('members');

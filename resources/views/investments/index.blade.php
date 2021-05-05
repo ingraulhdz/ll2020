@@ -17,7 +17,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Investments')}}</h6>
+                                <h6 class="h3 mb-0 font-weight-bold text-primary">{{__('Gastos')}}</h6>
             
 <a href="/home" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
                         <span class="icon text-white-50">
@@ -33,9 +33,9 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Donnor</th>
-                                            <th>Amunt</th>
-                                            <th>Project</th>
+                                            <th>Nombre</th>
+                                            <th>Cantidad </th>
+                                            <th>Proyecto</th>
                                            
                                             <th>Options</th>
                                         </tr>
@@ -46,7 +46,7 @@
 
                                         <tr>
                                         <td> <a href="{{ route('investments.show', $investment)}}" > {{$investment->name}}</a></td>
-                      <td>$ {{number_format($investment->amount)}}</td>
+                      <td>$ {{number_format($investment->amount)}} MXN</td>
                                             <td>{{$investment->project->name}}</td>
 
                                             <td>

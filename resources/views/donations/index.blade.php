@@ -47,7 +47,7 @@
                                         <td> <a href="{{ route('donations.show', $donation)}}" ># 00{{$donation->id}}</a></td>
                     
                                         <td>{{$donation->supporter->fullname()}}</td>
-                      <td>$ {{number_format($donation->amount)}}</td>
+                      <td>$ {{number_format($donation->amount)}} MXN</td>
                       <td>{{$donation->project->name ?? ''}} </td>
                                             <td>
                            

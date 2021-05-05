@@ -68,18 +68,22 @@ class DonationController extends Controller
 
 	public function store(Request $request)
 	{ 
+        
         $data = $this->validate(request(), [
-//             'name' => 'required|min:2|max:244',
-//             'last_name' => 'required|min:2|max:244',
+
 'supporter_id' => 'required|nullable',
 'amount' => 'required|numeric|nullable',
-//'voucher' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
+'voucher' => 'image|mimes:jpeg,png,jpg,gif,svg|max:2048',
 
    ]);
      
 		try{
 
-            $donation = new donation($request->all());
+            $donation = new donation();
+            $donation->supporter_id = $request->supporter_id;
+            $donation->amount = $request->amount;
+            $donation->account_id = $request->account_id;
+            $donation->project_id = $request->project_id;
             $donation->save();
 
             $imageName = $donation->id.'.'.request()->voucher->getClientOriginalExtension();
