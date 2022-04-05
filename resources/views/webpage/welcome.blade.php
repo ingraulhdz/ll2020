@@ -1,141 +1,134 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
-    <meta name="generator" content="Hugo 0.80.0">
-    <title>La Loma Mexico</title>
-    <!-- <script type="applisalonion/x-javascript">
- addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false); 
- function hideURLbar(){ window.scrollTo(0,1); }
- </script> -->
-    <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/carousel/">
-    <!-- Bootstrap core CSS -->
-    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="front/css/iconeffects.css" rel='stylesheet' type='text/css' />
-    <link href="front/css/style.css" rel='stylesheet' type='text/css' />
-    <link rel="stylesheet" href="front/css/swipebox.css">
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
 
-    <script src="front/js/jquery-1.11.1.min.js"></script>
-    <script type="text/javascript" src="front/js/move-top.js"></script>
-    <script type="text/javascript" src="front/js/easing.js"></script>
+  <title>La Loma | Mexico </title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
 
+  <!-- Favicons -->
+  <link href="assets/img/favicon.png" rel="icon">
+  <link href="assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
 
-    <style>
-        .bd-placeholder-img {
-            font-size: 1.125rem;
-            text-anchor: middle;
-            -webkit-user-select: none;
-            -moz-user-select: none;
-            user-select: none;
-        }
+  <!-- Vendor CSS Files -->
+    @include('webpage.css')
 
-        @media (min-width: 768px) {
-            .bd-placeholder-img-lg {
-                font-size: 3.5rem;
-            }
-        }
-
-    </style>
-
-
-    <!-- Custom styles for this template -->
-    <link href="css/carousel.css" rel="stylesheet">
 </head>
 
 <body>
-    @include('webpage.header')
 
-    <main>
-        @include('webpage.carousel')
+  <!-- ======= Header ======= -->
+  @include('webpage.header')
 
-        <!-- Marketing messaging and featurettes
-  ================================================== -->
-        <!-- Wrap the rest of the page in another container to center all the content. -->
+ 
+  <!-- End Header -->
 
-        <div class="container marketing">
+  <!-- ======= Carosel Section ======= -->
+  
+  @include('webpage.carousel')
 
-            <!-- START THE FEATURETTES -->
+  
+  <!-- End Carosel -->
 
-            <hr class="featurette-divider">
+  <main id="main">
 
-            @include('webpage.bienvenido')
+    <!-- ======= sponsor Section ======= -->
 
-            <hr class="featurette-divider">
+    @include('webpage.sponsors')
+    <!-- ======= end sponsor Section ======= -->
+    
 
-            @include('webpage.acerca')
+    <!-- ======= About Section ======= -->
 
-            <hr class="featurette-divider">
+    @include('webpage.acerca')
 
-            @include('webpage.actividades')
+    <!-- End About Section -->
+
+    <!-- ======= Counts Section ======= -->
+   
+       @include('webpage.counter')
+
+   
+   
+   
+    <!-- End Counts Section -->
 
 
-            <hr class="featurette-divider">
+    <!-- ======= About Section ======= -->
+   
+          @include('webpage.about')
 
-            @include('webpage.proyectos')
+   
+    <!-- End Services Section -->
 
-            <hr class="featurette-divider">
 
-            @include('webpage.testimonios')
+    <!-- ======= LA galeria Section ======= -->
+              @include('webpage.galeria')
 
-            <hr class="featurette-divider">
+    
+    
+    <!-- End la galeria Section -->
 
-            @include('webpage.galeria')
+    <!-- ======= Projects Section ======= -->
+    
+    @include('webpage.projects')
+    
+    <!-- End Tabs Section -->
 
-            <hr class="featurette-divider">
+    <!-- ======= Testimonials Section ======= -->
+        @include('webpage.testimonios')
 
-            @include('webpage.row')
+    
+    
+    <!-- End Testimonials Section -->
 
-            <hr class="featurette-divider">
+    <!-- ======= Pricing Section ======= -->
+    
+            @include('webpage.suscription')
 
-            @include('webpage.contacto')
+    
+    <!-- End Pricing Section -->
 
-            <hr class="featurette-divider">
+    <!-- ======= Frequently Asked Questions Section ======= -->
+   
+               @include('webpage.faqs')
 
-             @include('webpage.map')
-            
-            <hr class="featurette-divider">
+   
+    <!-- End Frequently Asked Questions Section -->
 
-        <!-- /END THE FEATURETTES -->
-        </div>
+    <!-- ======= Team Section ======= -->
+    
+                   @include('webpage.team')
 
-    </main>
+    
+    <!-- End Team Section -->
 
-    @include('webpage.footer')
+    <!-- ======= Contact Section ======= -->
+   
+                      @include('webpage.contacto')
 
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+   
+    <!-- End Contact Section -->
 
-    <script type="text/javascript">
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event) {
-                event.preventDefault();
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 900);
-            });
-        });
+  </main><!-- End #main -->
 
-    </script>
-    <!-- swipe box js -->
-    <script src="front/js/jquery.swipebox.min.js"></script>
-    <script type="text/javascript">
-        jQuery(function($) {
-            $(".swipebox").swipebox();
-        });
+  <!-- ======= Footer ======= -->
+                        @include('webpage.footer')
 
-    </script>
-    <!-- //swipe box js -->
-    <!--animate-->
-    <link href="front/css/animate.css" rel="stylesheet" type="text/css" media="all">
-    <script src="front/js/wow.min.js"></script>
-    <script>
-        new WOW().init();
+  
+  <!-- End Footer -->
 
-    </script>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+
+  <!-- Vendor JS Files -->
+                          @include('webpage.js')
+
 
 </body>
 

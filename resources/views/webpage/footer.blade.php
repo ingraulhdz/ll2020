@@ -1,47 +1,67 @@
+<footer id="footer">
 
-    <footer class="footer text-center">
-        <div class="container">
-            <!--logo2-->
-            <div class="loga2 wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                <a href="index.html">
-                    <h1>L<span>a Loma</span></h1>
-                </a>
-                <p>Mexico</p>
-            </div>
-            <!--//logo2-->
-            <!-- <p class="float-end"><a href="#">Back to top</a></p> -->
+    <div class="footer-top">
+      <div class="container">
+        <div class="row">
 
-            <p class="flag_tag2">Siguenos</p>
-            <ul class="social wow slideInDown" data-wow-duration="1s" data-wow-delay=".3s">
-                <li><a href="https://www.facebook.com/LaLomaMexico" class="btn btn-primary btn-xl"> Facebook</a></li>
-                <li><a href="https://www.facebook.com/LaLomaMexico" class="btn btn-danger btn-xl"> Instagram</a></li>
-                <div class="clearfix"></div>
+          <div class="col-lg-3 col-md-6 footer-contact">
+            <h3>Fundacion La Loma Mexico 2020-30 NFP<span>.</span></h3>
+            <p>
+              1261 Adler LN,<br> Carol Stream, <br>Illinois <br> Estados Unidos 60188 <br>
+         
+              <strong>Phone:</strong> +1 5589 55488 55<br>
+              <strong>Email:</strong> lalomatransformacion@gmail.com<br>
+            </p>
+          </div>
+
+          <div class="col-lg-2 col-md-6 footer-links">
+         <img src="assets/img/logo.png" width="100PX">
+          </div>
+
+          <div class="col-lg-3 col-md-6 footer-links">
+            <h4>Informacion</h4>
+            <ul>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Fundacion La Loma Mexico NFP</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Santa Maria La Loma, Mexico</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Acambay, Mexico</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+        
             </ul>
-            <br>
-            <p class="copy-right wow fadeInUp" data-wow-duration="1s" data-wow-delay=".3s">
-                &copy; 2020 La Loma, Acambay, Estado de Mexico. &middot; <a href="#">Privacy</a> &middot; <a
-                    href="#">Terms</a> </p>
+          </div>
+
+          <div class="col-lg-4 col-md-6 footer-newsletter">
+            <h4>Unete a nuestro boletin informativo </h4>
+            <p>Recibe en tu correo reportes mensuales de lo que se esta realizando en La Loma</p>
+            <form action="" method="post">
+              <input type="email" name="email"><input type="submit" value="Subscribe">
+            </form>
+          </div>
 
         </div>
-        <script type="text/javascript">
-            $(document).ready(function() {
-                /*
-          var defaults = {
-        containerID: 'toTop', // fading element id
-           containerHoverID: 'toTopHover', // fading element hover id
-           scrollSpeed: 1200,
-           easingType: 'linear' 
-        };
-          */
+      </div>
+    </div>
 
-                $().UItoTop({
-                    easingType: 'easeOutQuart'
-                });
+    <div class="container d-md-flex py-4">
 
-            });
+      <div class="me-md-auto text-center text-md-start">
+        <div class="copyright">
+          &copy; Copyright <strong><span>La Loma Mexico</span></strong>. Todos los derechos reservados
+        </div>
+        <div class="credits">
+          <!-- All the links in the footer should remain intact. -->
+          <!-- You can delete the links only if you purchased the pro version. -->
+          <!-- Licensing information: https://bootstrapmade.com/license/ -->
+          <!-- Purchase the pro version with working PHP/AJAX contact form: https://bootstrapmade.com/presento-bootstrap-corporate-template/ -->
+          Designed by <a href="https://ber-it.com/">Ber-it</a>
+        </div>
+      </div>
+      <div class="social-links text-center text-md-end pt-3 pt-md-0">
+       Redes sociales
+        <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
+        <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
+        <a href="#" class="google-plus"><i class="bx bxl-whatsapp"></i></a>
 
-        </script>
-        <!--end-smooth-scrolling-->
-        <a href="#home" id="toTop" class="scroll" style="display: block;">
-            <span id="toTopHover" style="opacity: 1;"> </span></a>
-    </footer>
+      </div>
+    </div>
+  </footer>

@@ -1,164 +1,151 @@
-<div class="row featurette" id="gallery">
+<section id="portfolio" class="portfolio">
+      <div class="container" data-aos="fade-up">
 
-                    <h3 class="tittle">Galeria</h3>
-                    <div class="arrows-serve"><img src="front/images/border.png" alt="border"></div>
+        <div class="section-title">
+          <h2>Galeria</h2>
+          <p>El clima  la vegetacion y el majestuoso cerrojo de las palomas nos regalan paisajes hermosos en el pueblo.</p>
+        </div>
 
-                    <div class="gallery-grids">
+        <div class="row" data-aos="fade-up" data-aos-delay="100">
+          <div class="col-lg-12 d-flex justify-content-center">
+            <ul id="portfolio-flters">
+              <li data-filter="*" class="filter-active">Todo</li>
+              <li data-filter=".filter-app">Paisajes</li>
+              <li data-filter=".filter-card">Proyectos</li>
+              <li data-filter=".filter-web">Web</li>
+            </ul>
+          </div>
+        </div>
 
-                        <div class="row">
-                            <div class="col-md-6 baner-top wow fadeInRight animated" data-wow-delay=".5s">
-                                <a href="images/g1.jpg" class="b-link-stripe b-animate-go  swipebox">
-                                    <div class="gal-spin-effect vertical ">
-                                        <img src="front/images/g1.jpg" alt=" " />
-                                        <div class="gal-text-box">
-                                            <div class="info-gal-con">
-                                                <h4>Iglecia</h4>
-                                                <span class="separator"></span>
-                                                <p>La iglecia del pueblo construida hace mas de 50 años.</p>
-                                                <span class="separator"></span>
+        <div class="row portfolio-container" data-aos="fade-up" data-aos-delay="200">
 
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 baner-top wow fadeInLeft animated" data-wow-delay=".5s">
-                                <a href="images/g2.jpg" class="b-link-stripe b-animate-go  swipebox">
-                                    <div class="gal-spin-effect vertical ">
-                                        <img src="front/images/g2.jpg" alt=" " />
-                                        <div class="gal-text-box">
-                                            <div class="info-gal-con">
-                                                <h4>Pulque</h4>
-                                                <span class="separator"></span>
-                                                <p>Al ser un lugar rodeado de magueyes, varias personas de el publo se
-                                                    dedican a producir delicioso pulque</p>
-                                                <span class="separator"></span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-                        </div>
-
-
-                        <div class="row">
-
-                            <div class="col-md-3 baner-top ban-mar wow fadeInUp animated" data-wow-delay=".5s">
-                                <a href="images/c1.jpg" class="b-link-stripe b-animate-go  swipebox">
-                                    <div class="gal-spin-effect vertical ">
-                                        <img src="front/images/c1.jpg" alt=" " />
-                                        <div class="gal-text-box">
-                                            <div class="info-gal-con">
-                                                <h4>Enchiladas</h4>
-                                                <span class="separator"></span>
-                                                <p>Las enchiladas son un plato tipico de nuestra comunidad, rojas, con
-                                                    manteca de cerdo son deliciosas!.</p>
-                                                <span class="separator"></span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-3 baner-top ban-mar wow fadeInDown animated" data-wow-delay=".5s">
-                                <a href="images/c2.jpg" class="b-link-stripe b-animate-go  swipebox">
-                                    <div class="gal-spin-effect vertical ">
-                                        <img src="front/images/c2.jpg" alt=" " />
-                                        <div class="gal-text-box">
-                                            <div class="info-gal-con">
-                                                <h4>Rutas 4x4</h4>
-                                                <span class="separator"></span>
-                                                <p>Las mejores aventuras te esperan.</p>
-                                                <span class="separator"></span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-3 baner-top ban-mar wow fadeInUp animated" data-wow-delay=".5s">
-                                <a href="images/c3.jpg" class="b-link-stripe b-animate-go  swipebox">
-                                    <div class="gal-spin-effect vertical ">
-                                        <img src="front/images/c3.jpg" alt=" " />
-                                        <div class="gal-text-box">
-                                            <div class="info-gal-con">
-                                                <h4>Paisajes</h4>
-                                                <span class="separator"></span>
-                                                <p>Rodeados de paisajes panoramicoss.</p>
-                                                <span class="separator"></span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-3 baner-top ban-mar wow fadeInDown animated" data-wow-delay=".5s">
-                                <a href="images/c4.jpg" class="b-link-stripe b-animate-go  swipebox">
-                                    <div class="gal-spin-effect vertical ">
-                                        <img src="front/images/c4.jpg" alt=" " />
-                                        <div class="gal-text-box">
-                                            <div class="info-gal-con">
-                                                <h4>Julio</h4>
-                                                <span class="separator"></span>
-                                                <p>Julio es el mes mas esperado, cada año se realiza la fiesta
-                                                    patronal..</p>
-                                                <span class="separator"></span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
-
-
-
-
-                        <div class="row">
-
-                            <div class="col-md-6 baner-top wow fadeInRight animated" data-wow-delay=".5s">
-                                <a href="images/g7.jpg" class="b-link-stripe b-animate-go  swipebox">
-                                    <div class="gal-spin-effect vertical ">
-                                        <img src="front/images/g7.jpg" alt=" " />
-                                        <div class="gal-text-box">
-                                            <div class="info-gal-con">
-                                                <h4>Santa Maria La Loma</h4>
-                                                <span class="separator"></span>
-                                                <p>Pertenece al Municipio de Acambay, en el Estado de Mexico.</p>
-                                                <span class="separator"></span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                            <div class="col-md-6 baner-top wow fadeInLeft animated" data-wow-delay=".5s">
-                                <a href="images/g8.jpg" class="b-link-stripe b-animate-go  swipebox">
-                                    <div class="gal-spin-effect vertical ">
-                                        <img src="front/images/g8.jpg" alt=" " />
-                                        <div class="gal-text-box">
-                                            <div class="info-gal-con">
-                                                <h4> Visitanos</h4>
-                                                <span class="separator"></span>
-                                                <p>Visita La Loma, te aseguramos que querras volver.</p>
-                                                <span class="separator"></span>
-
-                                            </div>
-                                        </div>
-                                    </div>
-                                </a>
-                            </div>
-
-                        </div>
-
-
-                    </div>
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-1.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 1</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-1.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
                 </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-2.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-2.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-3.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 2</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-3.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-4.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 2</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-4.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-5.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 2</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-5.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 2"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-app">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-6.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>App 3</h4>
+                <p>App</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-6.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="App 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-7.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 1</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-7.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 1"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-card">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-8.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Card 3</h4>
+                <p>Card</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-8.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Card 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4 col-md-6 portfolio-item filter-web">
+            <div class="portfolio-wrap">
+              <img src="assets/img/portfolio/portfolio-9.jpg" class="img-fluid" alt="">
+              <div class="portfolio-info">
+                <h4>Web 3</h4>
+                <p>Web</p>
+                <div class="portfolio-links">
+                  <a href="assets/img/portfolio/portfolio-9.jpg" data-gallery="portfolioGallery" class="portfolio-lightbox" title="Web 3"><i class="bx bx-plus"></i></a>
+                  <a href="portfolio-details.html" title="More Details"><i class="bx bx-link"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>

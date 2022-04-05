@@ -1,72 +1,91 @@
+<section id="testimonials" class="testimonials">
+      <div class="container" data-aos="fade-up">
+        <div class="section-title">
+          <h2>Testimonios</h2>
+          <p>Algunos testimonios de amigos de la comunidad sobre nuestra organizacion.</p>
+        </div>
 
-            <div class="row featurette">
+        <div class="testimonials-slider swiper" data-aos="fade-up" data-aos-delay="100">
+          <div class="swiper-wrapper">
 
-                <div class="col-md-6 test-left-img"></div>
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-1.jpg" class="testimonial-img" alt="">
+                  <h3>Saul Goodman</h3>
+                  <h4>Ceo &amp; Founder</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Proin iaculis purus consequat sem cure digni ssim donec porttitora entum suscipit rhoncus. Accusantium quam, ultricies eget id, aliquam eget nibh et. Maecen aliquam, risus at semper.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
 
-                <div class="col-md-6 test-monials">
-                    <h3 class="tittle">Testimonios de visitantes.</h3>
-                    <div class="arrows-serve test"><img src="front/images/border.png" alt="border"></div>
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-2.jpg" class="testimonial-img" alt="">
+                  <h3>Sara Wilsson</h3>
+                  <h4>Designer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Export tempor illum tamen malis malis eram quae irure esse labore quem cillum quid cillum eram malis quorum velit fore eram velit sunt aliqua noster fugiat irure amet legam anim culpa.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
 
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-3.jpg" class="testimonial-img" alt="">
+                  <h3>Jena Karlis</h3>
+                  <h4>Store Owner</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Enim nisi quem export duis labore cillum quae magna enim sint quorum nulla quem veniam duis minim tempor labore quem eram duis noster aute amet eram fore quis sint minim.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
 
-                    <div class="sreen-gallery-cursual">
-                        <!-- required-js-files-->
-                        <link href="front/css/owl.carousel.css" rel="stylesheet">
-                        <script src="front/js/owl.carousel.js"></script>
-                        <script>
-                            $(document).ready(function() {
-                                $("#owl-demo").owlCarousel({
-                                    items: 1,
-                                    lazyLoad: true,
-                                    autoPlay: true,
-                                    navigation: false,
-                                    navigationText: false,
-                                    pagination: true,
-                                });
-                            });
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-4.jpg" class="testimonial-img" alt="">
+                  <h3>Matt Brandon</h3>
+                  <h4>Freelancer</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Fugiat enim eram quae cillum dolore dolor amet nulla culpa multos export minim fugiat minim velit minim dolor enim duis veniam ipsum anim magna sunt elit fore quem dolore labore illum veniam.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
 
-                        </script>
+            <div class="swiper-slide">
+              <div class="testimonial-wrap">
+                <div class="testimonial-item">
+                  <img src="assets/img/testimonials/testimonials-5.jpg" class="testimonial-img" alt="">
+                  <h3>John Larson</h3>
+                  <h4>Entrepreneur</h4>
+                  <p>
+                    <i class="bx bxs-quote-alt-left quote-icon-left"></i>
+                    Quis quorum aliqua sint quem legam fore sunt eram irure aliqua veniam tempor noster veniam enim culpa labore duis sunt culpa nulla illum cillum fugiat esse veniam culpa fore nisi cillum quid.
+                    <i class="bx bxs-quote-alt-right quote-icon-right"></i>
+                  </p>
+                </div>
+              </div>
+            </div><!-- End testimonial item -->
 
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
 
-                        <div id="owl-demo" class="owl-carousel">
-
-                            <div class="item-owl">
-                                <div class="test-review">
-                                    <p class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".4s"><img
-                                            src="front/images/left-quotes.png" alt=""> Consetetur sadipscing elitr, sed
-                                        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                                        diam voluptua. <img src="front/images/right-quotes.png" alt=""></p>
-                                    <img src="front/images/t3.jpg" class="img-responsive" alt="" />
-                                    <h5 class="wow bounceIn" data-wow-duration=".8s" data-wow-delay=".2s">Martin H.
-                                        Joseph</h5>
-                                </div>
-                            </div>
-
-                            <div class="item-owl">
-                                <div class="test-review">
-                                    <p class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".4s"> <img
-                                            src="front/images/left-quotes.png" alt="">Polite sadipscing elitr, sed diam
-                                        nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam
-                                        voluptua.<img src="front/images/right-quotes.png" alt=""></p>
-                                    <img src="front/images/t2.jpg" class="img-responsive" alt="" />
-                                    <h5 class="wow bounceIn" data-wow-duration=".8s" data-wow-delay=".2s">Dennis Pal,
-                                    </h5>
-                                </div>
-                            </div>
-
-                            <div class="item-owl">
-                                <div class="test-review">
-                                    <p class="wow fadeInUp" data-wow-duration=".8s" data-wow-delay=".4s"><img
-                                            src="front/images/left-quotes.png" alt=""> Consetetur sadipscing elitr, sed
-                                        diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed
-                                        diam voluptua. <img src="front/images/right-quotes.png" alt=""></p>
-                                    <img src="front/images/t1.jpg" class="img-responsive" alt="" />
-                                    <h5 class="wow bounceIn" data-wow-duration=".8s" data-wow-delay=".2s">Martin
-                                        H.Wilson</h5>
-                                </div>
-                            </div>
-
-                        </div>
-                    </div>
-
-                 </div>
-                 </div>
+      </div>
+    </section>

@@ -25,7 +25,7 @@
                 <!-- Begin Page Content -->
                 <div class="container-fluid">
                 @include('front.alert')
-
+dfgdfgdfgdfgdfgdgf
                 @yield('content')
 </div>
             <!-- End of Main Content -->
