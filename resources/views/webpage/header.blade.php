@@ -30,6 +30,10 @@
             </ul>
           </li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
+<<<<<<< HEAD
+=======
+          <li><a class="nav-link scrollto " href="login.html">Iniciar Sesion</a></li>
+>>>>>>> master
 
 
           @if (Route::has('login'))
@@ -50,6 +54,10 @@
                                         </li>
 
 
+<<<<<<< HEAD
+=======
+                            </ul>
+>>>>>>> master
                             @endif
                         @endauth
                         @endif
@@ -60,6 +68,7 @@
 
 
 
+<<<<<<< HEAD
           <li><a class="nav-link scrollto " href="#">
 
 
@@ -72,11 +81,23 @@
 
 
           </a></li>
+=======
+          <li><a class="nav-link scrollto " href="#"></a></li>
+>>>>>>> master
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
 
 
+<<<<<<< HEAD
+=======
+
+    <form action="https://www.paypal.com/donate" method="post" target="_top">
+      <input type="hidden" name="hosted_button_id" value="ZK6LQ6HWURELW" />
+      <button class="btn btn-primary" type="submit"><i class="bi bi-heart-fill"></i> Donar </button>
+    </form>
+
+>>>>>>> master
 
 
     </div>
