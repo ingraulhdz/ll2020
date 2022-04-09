@@ -310,7 +310,7 @@
                                         <!-- <a href="{{ route('investments.show', $item->id)}}" > -->
                                                  <tr >
                                             
-                                        <td><a href="{{ route('donations.show', $item->id)}}" > {{$item->supporter->name}}</a></td>
+                                        <td><a href="{{ route('donations.show', $item->id)}}" > {{ $item->sponsor}}</a></td>
                                         <td>$ {{number_format($item->amount)}} MXN</td>
 
                                         </tr>

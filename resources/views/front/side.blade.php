@@ -1,11 +1,12 @@
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 <!-- 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/home">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-church"></i>
+                <h1 class="logo me-auto"><img  src="/assets/img/logo-2.svg" width="64px"></h1>
+
                 </div>
-                <div class="sidebar-brand-text mx-3">La Loma<sup>2020   </sup></div>
+                <div class="sidebar-brand-text mx-3">La Loma<sup>   </sup></div>
             </a>
 
             <!-- Divider -->

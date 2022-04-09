@@ -44,13 +44,6 @@
                                     <li><a class="nav-link scrollto " href="{{ route('login') }}">Iniciar Sesion</a></li>
 
 
-                                    @if (Route::has('register'))
-                                        <li ><a class="nav-link scrollto " data-hover="Registrar"
-                                                href="{{ route('register') }}">Registrarse</a>
-                                        </li>
-
-
-                            @endif
                         @endauth
                         @endif
 

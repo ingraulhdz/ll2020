@@ -15,20 +15,42 @@ class CreateDonationsTable extends Migration
     {
         Schema::create('donations', function (Blueprint $table) {
             $table->bigIncrements('id');
+            $table->string('sponsor');
+            $table->string('description')->nullable();
+
+            $table->double('amount', 8, 2)->nullable();
+            $table->date('date')->nullable();;   
+
+
+
+            $table->double('amount_mxn', 8, 2)->nullable();
+            $table->double('amount_usd', 8, 2)->nullable(); 
             $table->string('method')->nullable();
             $table->string('voucher')->nullable();
-            $table->double('amount', 8, 2); 
-                 $table->unsignedBigInteger('account_id');
-
+            $table->unsignedBigInteger('account_id')->nullable();
             $table->foreign('account_id')->references('id')->on('accounts');
-
-            $table->unsignedBigInteger('supporter_id');
-
+            $table->unsignedBigInteger('supporter_id')->nullable();;
             $table->foreign('supporter_id')->references('id')->on('members');
             $table->unsignedBigInteger('project_id')->nullable();
+    $table->foreign('project_id')->references('id')->on('projects')->default(1); ;
 
-    $table->foreign('project_id')->references('id')->on('projects');
+$table->string('phone_sponsor')->nullable();
+$table->string('email_sponsor')->nullable();
+$table->string('country_sponsor')->nullable();
+$table->string('nickname_sponsor')->nullable();
+$table->unsignedBigInteger('registred_by')->nullable();
+
+$table->foreign('registred_by')->references('id')->on('users')->nullable();;
+
+
     $table->boolean('status')->default(1);   
+
+
+
+
+
+
+
     $table->softDeletes();
 
             $table->timestamps();

@@ -24,7 +24,7 @@
           <div class="card-body p-0">
             <!-- Nested Row within Card Body -->
             <div class="row">
-              <div class="col-lg-6 d-none d-lg-block bg-login-image">
+              <div class="col-lg-6 d-none d-lg-block bg-login-image mt-5">
                 <img src="assets/img/logo-2.svg">
               </div>
               <div class="col-lg-6">
@@ -67,7 +67,7 @@
         <strong>{{ $message }}</strong>
     </span>
 @enderror
-                    </div><br>
+                    </div>
                     <div class="form-group">
                       <div class="custom-control custom-checkbox small">
                         <input type="checkbox" class="custom-control-input" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
@@ -75,20 +75,27 @@
                           Me</label>
                       </div>
                     </div><br>
-                    <div class="row">
-                    <div class="col-6">
-                    <button type="submit" class="btn btn-primary ">
-                      
-                      Login
-                   
-</button>
-</div>
-                                        <div class="col-6">
+                    <div class="form-group row">
+                      <div class="col-sm-4 mb-3 mb-sm-0">
+                       <button type="submit" class="btn btn-success ">Login</button>
+                      </div>
+              <div class="col-sm-4 mb-3 mb-sm-0">
 
                       <a href="/" class="btn btn-danger ">
                         Cancelar
                       </a></div>
+<div class="col-sm-4 mb-3 mb-sm-0">
+
+                      <a href="{{route('register')}}" class="btn btn-primary ">
+                        Registrarse
+                      </a></div>
                   </div>
+
+
+              
+
+
+
                     <hr>
                     <div class="row">
                     <a href="index.html" class="btn btn-danger btn-user btn-block">
@@ -96,6 +103,10 @@
                     </a><br><br>
                     <a href="index.html" class="btn btn-primary btn-user btn-block mt-2">
                     <i class="bi bi-facebook"></i> Login with Facebook
+                    </a>
+                    <br><br>
+                    <a href="index.html" class="btn btn-dark btn-user btn-block mt-2">
+                    <i class="bi bi-apple"></i> Login with Apple
                     </a></div>
                   </form>
                   <hr>
@@ -107,9 +118,7 @@
 
 
                   </div>
-                  <div class="text-center">
-                    <a class="small" href="{{route('register')}}">>Create an Account!</a>
-                  </div>
+                
                 </div>
               </div>
             </div>

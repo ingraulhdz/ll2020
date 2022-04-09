@@ -15,7 +15,7 @@ class Donation extends Model
     //
     protected $fillable = [
 
-        'supporter_id','project_id','amount', 'voucher'
+        'supporter_id','project_id','amount', 'voucher', 'date'
             ];
 
  public function currency()

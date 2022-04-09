@@ -30,7 +30,7 @@ class ProjectController extends Controller
                 $project = Project::where('id', $request->id)->first();
                 $id = $request->id;
                 $donationsByMonth = \DB::select("
-                SELECT  SUM(amount) AS total,CONCAT(monthName(created_at)) AS fecha
+                SELECT  SUM(amount) AS total,CONCAT(monthName(date)) AS fecha
                 FROM donations 
                 WHERE project_id=".$id."
                 Group by fecha
@@ -147,7 +147,7 @@ public function getDataDashboard()
 
 
                 $donationsByMonth = \DB::select("
-                SELECT  SUM(amount) AS total,CONCAT(monthName(created_at)) AS fecha
+                SELECT  SUM(amount) AS total,CONCAT(year(date)) AS fecha
                 FROM donations 
                 Group by fecha
                 ORDER BY fecha ASC

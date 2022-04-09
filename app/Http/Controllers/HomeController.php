@@ -52,6 +52,10 @@ class HomeController extends Controller
       ->get()->take(3);
 
 
+
+
+
+
    $donations = Donation::get();
     $division =     DB::select(" 
     SELECT projects.id, projects.name, SUM(donations.amount) AS TOTALAMOUNT

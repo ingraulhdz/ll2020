@@ -6,7 +6,7 @@ function expensesDistribution(data){
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
-  type: 'doughnut',
+  type: 'pie',
   data: {
     labels: data.projects,
     datasets: [{
