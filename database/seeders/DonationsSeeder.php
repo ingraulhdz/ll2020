@@ -17,9 +17,9 @@ class DonationsSeeder extends Seeder
         $sql = file_get_contents($path);
         \DB::unprepared($sql);
 
-        $path = base_path('database/sql/centro.sql');
-        $sql = file_get_contents($path);
-        \DB::unprepared($sql);
+        // $path = base_path('database/sql/centro.sql');
+        // $sql = file_get_contents($path);
+        // \DB::unprepared($sql);
 
         $path = base_path('database/sql/delegacion_exterior.sql');
         $sql = file_get_contents($path);
