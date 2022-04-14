@@ -16,11 +16,14 @@ class CreateInvestmentsTable extends Migration
         Schema::create('investments', function (Blueprint $table) {
             $table->bigIncrements('id');
             $table->string('name');
-            $table->string('description');
+            $table->string('description')->nullable();
+            $table->string('note')->nullable();
             $table->double('amount', 8, 2); 
+            $table->date('date')->nullable();;   
+
             $table->boolean('status')->default(1);   
             $table->string('voucher')->nullable();
-     $table->unsignedBigInteger('account_id');
+     $table->unsignedBigInteger('account_id')->nullable();
 
             $table->foreign('account_id')->references('id')->on('accounts');
 
