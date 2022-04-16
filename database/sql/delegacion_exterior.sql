@@ -1,14 +1,14 @@
 INSERT INTO `ll2020`.`donations` (`sponsor`, `amount_usd`, `amount`, `project_id`, `date`) VALUES ('Abel Perez Gonzalez', 50, '1000', '5', '2021-11-02'),
- ('Adan Ruiz', 50, '1000', '5', '2021-11-02'),
- ('Adrian Quintana', 50, '1000', '5', '2021-11-02'),
+ ('Adan Ruiz', 50, '1000', '5', '2021-10-02'),
+ ('Adrian Quintana', 50, '1000', '5', '2021-10-02'),
  ('Alex Ugalde', 100, '2000', '5', '2021-11-02'),
- ('Alfredo Quintana(nidos)', 50, '1000', '5', '2021-11-02'),
- ('Antonio Gonzalez', 50, '1000', '5', '2021-11-02'),
- ('Antonio Quintana', 30, '600', '5', '2021-11-02'),
- ('Balanzar Perez', 50, '1000', '5', '2021-11-02'),
- ('Carlos Quintana Mejia', 50, '1000', '5', '2021-11-02'),
- ('Chuy Perez Garcia', 50, '1000', '5', '2021-11-02'),
- ('Clemente Gonzalez', 50, '1000', '5', '2021-11-02'),
+ ('Alfredo Quintana(nidos)', 50, '1000', '5', '2021-10-02'),
+ ('Antonio Gonzalez', 50, '1000', '5', '2021-10-02'),
+ ('Antonio Quintana', 30, '600', '5', '2021-10-02'),
+ ('Balanzar Perez', 50, '1000', '5', '2021-10-02'),
+ ('Carlos Quintana Mejia', 50, '1000', '5', '2021-10-02'),
+ ('Chuy Perez Garcia', 50, '1000', '5', '2021-10-02'),
+ ('Clemente Gonzalez', 50, '1000', '5', '2021-10-02'),
  ('Diego Quintana', 0, '200', '5', '2021-11-02'),
  ('Donato Perez', 50, '9700', '5', '2021-11-02'),
  ('Dr. Julio', 0, '200', '5', '2021-11-02'),
@@ -53,8 +53,20 @@ INSERT INTO `ll2020`.`donations` (`sponsor`, `amount_usd`, `amount`, `project_id
  ('Pablo Perez', 50, '1000', '5', '2021-11-04'),
  ('Raul Hernandez Perez', 0, '1000', '5', '2021-11-05'),
  ('Rene Quintana Ruiz', 50, '1000', '5', '2021-11-05'),
- ('Richi Perez', 50, '1000', '5', '2021-11-05'),
- ('Severiano Gonzalez', 50, '1000', '5', '2021-11-05'),
- ('Valentin Perez Garcia', 50, '1000', '5', '2021-11-05'),
+ ('Richi Perez', 50, '1000', '5', '2021-12-05'),
+ ('Severiano Gonzalez', 50, '1000', '5', '2021-12-05'),
+ ('Valentin Perez Garcia', 50, '1000', '5', '2021-12-05'),
  ('Mojardin', 0, '200', '5', '2021-11-05'),
- ('Eleazar Mejia', 0, '100', '5', '2021-11-05');;
+ ('Eleazar Mejia', 0, '100', '5', '2021-12-05');
+
+ INSERT INTO `ll2020`.`investments` 
+ (`name`, `amount`, `date`, `project_id`, `category_id`) 
+VALUES 
+('Mojardin un peon', 200, '2021-11-12', 5, 1),                   
+ ('Eleazar medio peon', 100, '2021-11-12',5, 1),
+ ('Mano hobra', 5100, '2021-11-13', 5, 1),
+ ('Mano hobra', 5300, '2021-11-14', 5, 1),
+ ('Mano hobra', 5100, '2021-11-15', 5, 1),
+ ('Mano hobra', 4806, '2021-11-16', 5, 1),
+ ('25 arboles', 10000, '2021-11-16', 5, 6),
+ ('22 lamparas', 91960, '2021-11-17', 5, 7);;

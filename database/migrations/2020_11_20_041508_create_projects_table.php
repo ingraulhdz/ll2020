@@ -38,12 +38,14 @@ class CreateProjectsTable extends Migration
             'name' => 'Donacion libre',
             'description' => 'Donacion al pueblo para que el comite decida el uso ',
             'advance' => 100,
+            'photo' => '/images/projects/1/gallery/show.jpeg'
         ]);  
 
         DB::table('projects')->insert([
             'name' => 'Lienzo charro',
             'description' => 'Construccion de lienzo charro para eventos de charreria, y jaripeos.',
             'advance' => 80,
+            'photo' => '/images/projects/2/gallery/show.jpeg'
         ]);  
 
         
@@ -51,17 +53,20 @@ class CreateProjectsTable extends Migration
             'name' => 'centro',
             'description' => 'calles, banquetas, y todo lo referente al centro ',
             'advance' => 28,
+            'photo' => '/images/projects/3/gallery/show.jpeg'             
         ]); 
         DB::table('projects')->insert([
             'name' => 'Escuelita Secundaria Exterior',
             'description' => 'REmodelacion el exterior de la Escuela secundaria',
-            'advance' => 100,
+            'advance' => 100, 
+            'photo' => '/images/projects/4/gallery/show.jpeg'
         ]); 
 
         DB::table('projects')->insert([
             'name' => 'Delegacion Exterior',
             'description' => 'Remodelacion de la fachada de la delegacion',
             'advance' => 100,
+            'photo' => '/images/projects/5/gallery/show.jpeg'
         ]); 
 
         
@@ -69,6 +74,7 @@ class CreateProjectsTable extends Migration
             'name' => 'Alumbrado',
             'description' => 'Alumbrado de calles con iluminacion solar',
             'advance' => 28,
+            'photo' => '/images/projects/6/gallery/show.jpeg'
         ]); 
 
 
@@ -77,17 +83,20 @@ class CreateProjectsTable extends Migration
             'name' => 'limpieza centro',
             'description' => 'REacondicionamiento, y mantenimiento de los jardines ',
             'advance' => 30,
+            'photo' => '/images/projects/7/gallery/show.jpeg'
         ]); 
 
         DB::table('projects')->insert([
             'name' => 'Escuela Primaria Exterior SUR',
             'description' => 'REmodelacion sur de la escuela primaria incluyendo paredes vidrios, banquetas y arboles',
             'advance' => 100,
+            'photo' => '/images/projects/8/gallery/show.jpeg'
         ]);  
         DB::table('projects')->insert([
             'name' => 'Escuela Primaria Exterior NORTE ',
             'description' => 'Remodelacion de la parte Norte  de la escuela primaria incluyendo paredes vidrios, banquetas y arboles',
             'advance' => 100,
+            'photo' => '/images/projects/9/gallery/show.jpeg'
         ]);  
 
 
@@ -97,6 +106,7 @@ class CreateProjectsTable extends Migration
             'name' => 'Escuelita Secundaria Centro computo',
             'description' => 'Centro de computo dentro de la escuela secundaria.',
             'advance' => 20,
+            'photo' => '/images/projects/10/gallery/show.jpeg'
         ]); 
         
       

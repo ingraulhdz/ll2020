@@ -33,7 +33,7 @@ class DatabaseSeeder extends Seeder
     $this->call(CategoryExpensePermissionsSeeder::class);
     Member::factory(50)->create();
    // Donation::factory(50)->create();
-    Investment::factory(20)->create();
+    //Investment::factory(20)->create();
     $this->call(PermissionsTableSeeder::class);
     $this->call(DonationsSeeder::class);
     $this->call(ExpensesSeeder::class);

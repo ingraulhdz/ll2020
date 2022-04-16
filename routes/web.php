@@ -66,4 +66,7 @@ Route::view('charts.html', '/charts');
 Route::get('/bk', function () {
     return back();
 });
+
+
 Route::view('index.html', '/sb-admin/index');
+Route::view('db', '/dashboard');

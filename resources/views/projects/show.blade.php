@@ -7,7 +7,8 @@
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
                                 <h6 class="h3 mb-0 font-weight-bold text-primary">{{$project->name}}</h6>
                               
-                        <a href="{{route('projects.investment', $project->id)}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-warning btn-icon-split">
+                        <a href="{{route('projects.investment', $project->id)}}" 
+                        class="  btn-sm  shadow-sm btn btn-warning btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-arrow-down"></i>
                         </span>
@@ -16,11 +17,22 @@
   
                               
                                
-<a href="{{route('projects.donar', $project->id)}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-success btn-icon-split">
+                    <a href="{{route('projects.donar', $project->id)}}" 
+class=" btn-sm  shadow-sm btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
                             <i class="fas fa-arrow-up"></i>
                         </span>
-                        <span class="text">{{__('Donar')}}</span>
+                        <span class="text">{{__('Donaciones')}}</span>
+                    </a>
+
+
+                                                   
+<a href="{{route('projects.donar', $project->id)}}" 
+class=" btn-sm  shadow-sm btn btn-info btn-icon-split">
+                        <span class="icon text-white-50">
+                            <i class="fas fa-download"></i>
+                        </span>
+                        <span class="text">{{__('Reporte')}}</span>
                     </a>
 
 
@@ -244,12 +256,15 @@
                                     <div class="text-center">
   
 @if($project->photo)
-<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="{{$project->photo}}" alt="">
+<img class="img-fluid px-3 px-sm-4 mt-3 mb-4"
+ style="width: 25rem;"
+src="{{$project->photo}}" alt="">
 
 @else
-<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" style="width: 25rem;"
-                                            src="/backend/img/undraw_posting_photo.svg" alt="">
+<img class="img-fluid px-3 px-sm-4 mt-3 mb-4" 
+style="width: 25rem;"
+src="/backend/img/undraw_posting_photo.svg" 
+alt="">
 
 @endif
 
@@ -342,8 +357,8 @@
                         <thead>
                             <tr>
                                 <th>Gasto</th>
-                                <th>Cantidad</th>
                                 <th>Categoria</th>
+                                <th>Precio</th>
                           
                             </tr>
                         </thead>
@@ -400,7 +415,6 @@
 
 <script src="/backend/vendor/datatables/jquery.dataTables.min.js"></script>
     <script src="/backend/vendor/datatables/dataTables.bootstrap4.min.js"></script>
-
     <script src="/backend/js/demo/table-donations-by-project.js"></script>
     <script src="/backend/js/demo/table-expenses-by-project.js"></script>
 
