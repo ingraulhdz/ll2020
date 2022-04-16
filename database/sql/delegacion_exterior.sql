@@ -1,5 +1,4 @@
 INSERT INTO `ll2020`.`donations` (`sponsor`, `amount_usd`, `amount`, `project_id`, `date`) VALUES ('Abel Perez Gonzalez', 50, '1000', '5', '2021-11-02'),
-<<<<<<< HEAD
  ('Adan Ruiz', 50, '1000', '5', '2021-10-02'),
  ('Adrian Quintana', 50, '1000', '5', '2021-10-02'),
  ('Alex Ugalde', 100, '2000', '5', '2021-11-02'),
@@ -10,18 +9,6 @@ INSERT INTO `ll2020`.`donations` (`sponsor`, `amount_usd`, `amount`, `project_id
  ('Carlos Quintana Mejia', 50, '1000', '5', '2021-10-02'),
  ('Chuy Perez Garcia', 50, '1000', '5', '2021-10-02'),
  ('Clemente Gonzalez', 50, '1000', '5', '2021-10-02'),
-=======
- ('Adan Ruiz', 50, '1000', '5', '2021-11-02'),
- ('Adrian Quintana', 50, '1000', '5', '2021-11-02'),
- ('Alex Ugalde', 100, '2000', '5', '2021-11-02'),
- ('Alfredo Quintana(nidos)', 50, '1000', '5', '2021-11-02'),
- ('Antonio Gonzalez', 50, '1000', '5', '2021-11-02'),
- ('Antonio Quintana', 30, '600', '5', '2021-11-02'),
- ('Balanzar Perez', 50, '1000', '5', '2021-11-02'),
- ('Carlos Quintana Mejia', 50, '1000', '5', '2021-11-02'),
- ('Chuy Perez Garcia', 50, '1000', '5', '2021-11-02'),
- ('Clemente Gonzalez', 50, '1000', '5', '2021-11-02'),
->>>>>>> master
  ('Diego Quintana', 0, '200', '5', '2021-11-02'),
  ('Donato Perez', 50, '9700', '5', '2021-11-02'),
  ('Dr. Julio', 0, '200', '5', '2021-11-02'),
@@ -66,7 +53,6 @@ INSERT INTO `ll2020`.`donations` (`sponsor`, `amount_usd`, `amount`, `project_id
  ('Pablo Perez', 50, '1000', '5', '2021-11-04'),
  ('Raul Hernandez Perez', 0, '1000', '5', '2021-11-05'),
  ('Rene Quintana Ruiz', 50, '1000', '5', '2021-11-05'),
-<<<<<<< HEAD
  ('Richi Perez', 50, '1000', '5', '2021-12-05'),
  ('Severiano Gonzalez', 50, '1000', '5', '2021-12-05'),
  ('Valentin Perez Garcia', 50, '1000', '5', '2021-12-05'),
@@ -84,10 +70,3 @@ VALUES
  ('Mano hobra', 4806, '2021-11-16', 5, 1),
  ('25 arboles', 10000, '2021-11-16', 5, 6),
  ('22 lamparas', 91960, '2021-11-17', 5, 7);;
-=======
- ('Richi Perez', 50, '1000', '5', '2021-11-05'),
- ('Severiano Gonzalez', 50, '1000', '5', '2021-11-05'),
- ('Valentin Perez Garcia', 50, '1000', '5', '2021-11-05'),
- ('Mojardin', 0, '200', '5', '2021-11-05'),
- ('Eleazar Mejia', 0, '100', '5', '2021-11-05');;
->>>>>>> master

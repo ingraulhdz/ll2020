@@ -256,8 +256,8 @@ class=" btn-sm  shadow-sm btn btn-info btn-icon-split">
                                     <div class="text-center">
   
 @if($project->photo)
-<img class="img-fluid px-3 px-sm-4 mt-3 mb-4"
- style="width: 25rem;"
+<img class=""
+ width="300px" height="200px" 
 src="{{$project->photo}}" alt="">
 
 @else
@@ -269,7 +269,7 @@ alt="">
 @endif
 
                                     </div>
-                                    <p>{{$project->description}}</p>
+                                    <p class="px-3 px-sm-4 mt-3 mb-4" >{{$project->description}}</p>
                                   
                                 </div>
                             </div>

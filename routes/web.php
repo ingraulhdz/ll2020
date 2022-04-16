@@ -69,4 +69,4 @@ Route::get('/bk', function () {
 
 
 Route::view('index.html', '/sb-admin/index');
-Route::view('db', '/dashboard');
+Route::get('/db', [ProjectController::class, 'index'])->name('index');

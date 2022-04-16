@@ -29,10 +29,12 @@ class CreateCategoryExpensesTable extends Migration
         DB::table('category_expenses')->insert(['name' => 'Mantenimiento', 'description' => 'Mantenimiento de la obra']);
         DB::table('category_expenses')->insert(['name' => 'Alumbrado', 'description' => 'Compra e intstalaciond de alumbrado']);
         DB::table('category_expenses')->insert(['name' => 'Areas Verdes', 'description' => 'Copmpra de arboles, pasto plantes etc']);
-        DB::table('category_expenses')->insert(['name' => 'Renta Maquinaria', 'description' => 'Renta de maquinaria ']);
+        DB::table('category_expenses')->insert(['name' => 'Maquinaria', 'description' => 'Renta de maquinaria ']);
 
 
 DB::table('category_expenses')->insert(['name' => 'Viaticos', 'description' => 'pago de viaticos a organisadores']);
+DB::table('category_expenses')->insert(['name' => 'Servicios Profecionales', 'description' => 'Pago de servicios profecionales, ingenieros, arquitectos, etc']);
+DB::table('category_expenses')->insert(['name' => 'Eventos', 'description' => 'Gastos para eventos']);
     }
 
     /**
