@@ -31,7 +31,6 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                        <th>ID</th>
                                         <th>Donador</th>
                                         <th>Cantidad</th>
                                         <th>Proyecto</th>
@@ -44,9 +43,8 @@
                                     @foreach($donations as $donation)                       
 
                                         <tr>
-                                        <td> <a href="{{ route('donations.show', $donation)}}" ># 00{{$donation->id}}</a></td>
                     
-                                        <td>{{$donation->supporter->fullname()}}</td>
+                                        <td>{{$donation->sponsor}}</td>
                       <td>$ {{number_format($donation->amount)}} MXN</td>
                       <td>{{$donation->project->name ?? ''}} </td>
                                             <td>

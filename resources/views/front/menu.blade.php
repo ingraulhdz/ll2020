@@ -52,7 +52,7 @@
 
 
 <li class='nav-item'>
-                <a class='nav-link' href="{{ route('projects.index')}}">
+                <a class='nav-link' href="/db">
                     <i class='fas fa-fw fa-briefcase'></i>
                     <span>Proyectos</span></a>
             </li>

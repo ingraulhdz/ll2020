@@ -23,8 +23,8 @@ class CreateDonationsTable extends Migration
 
 
 
-            $table->double('amount_mxn', 8, 2)->nullable();
-            $table->double('amount_usd', 8, 2)->nullable(); 
+            $table->double('amount_mxn')->nullable();
+            $table->double('amount_usd')->nullable(); 
             $table->string('method')->nullable();
             $table->string('voucher')->nullable();
             $table->unsignedBigInteger('account_id')->nullable();

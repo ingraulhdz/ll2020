@@ -50,6 +50,10 @@ class DonationsSeeder extends Seeder
         $path = base_path('database/sql/primaria_sur.sql');
         $sql = file_get_contents($path);
         \DB::unprepared($sql);
+   
+        $path = base_path('database/sql/secundaria_exterior.sql');
+        $sql = file_get_contents($path);
+        \DB::unprepared($sql);
 
 
 
