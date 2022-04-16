@@ -14,6 +14,14 @@ class ExpensesSeeder extends Seeder
     public function run()
     {
         
+<<<<<<< HEAD
+=======
+        
+        $path = base_path('database/sql/gastos_delegacion.sql');
+        $sql = file_get_contents($path);
+        \DB::unprepared($sql);
+
+>>>>>>> master
          
         $path = base_path('database/sql/gastos_limpieza_centro.sql');
         $sql = file_get_contents($path);
