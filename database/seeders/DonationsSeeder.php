@@ -55,6 +55,10 @@ class DonationsSeeder extends Seeder
         $sql = file_get_contents($path);
         \DB::unprepared($sql);
 
+        $path = base_path('database/sql/members.sql');
+        $sql = file_get_contents($path);
+        \DB::unprepared($sql);
+
 
 
 

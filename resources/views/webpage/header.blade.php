@@ -30,7 +30,7 @@
             </ul>
           </li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-
+          <li><a class="nav-link scrollto " href="/rifa">RIFA</a></li>
 
           @if (Route::has('login'))
                                 @auth
@@ -41,7 +41,8 @@
 
                                 @else
                                   
-                                    <li><a class="nav-link scrollto " href="{{ route('login') }}">Iniciar Sesion</a></li>
+                                <li><a class="nav-link scrollto " href="{{ route('login') }}">Iniciar Sesion</a></li>
+                                
 
 
                         @endauth
@@ -65,6 +66,10 @@
 
 
           </a></li>
+
+          <li><a class="nav-link scrollto " href="/en"><img src="assets/img/usa.jpg" width="16px" height="16px"> EN</a></li>
+
+
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->

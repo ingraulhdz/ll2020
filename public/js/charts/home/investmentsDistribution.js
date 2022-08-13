@@ -6,13 +6,19 @@ function expensesDistribution(data){
 // Pie Chart Example
 var ctx = document.getElementById("myPieChart");
 var myPieChart = new Chart(ctx, {
+
+
+
+
+
+
   type: 'pie',
   data: {
     labels: data.projects,
     datasets: [{
       data: data.totalDivisions,
-      backgroundColor: ['#4e73df', '#1cc88a', '#36b9cc'],
-      hoverBackgroundColor: ['#2e59d9', '#17a673', '#2c9faf'],
+      backgroundColor: ['#746ab0', '#e83845', '#e389b9', '#ffce30', '#3db9c0', '#bfc03d', 'ffa900'],
+      hoverBackgroundColor: ['#2ebbd9', '#17a673', '#2c9faf'],
       hoverBorderColor: "rgba(234, 236, 244, 1)",
     }],
   },
@@ -23,16 +29,21 @@ var myPieChart = new Chart(ctx, {
       bodyFontColor: "#858796",
       borderColor: '#dddfeb',
       borderWidth: 1,
-      xPadding: 15,
-      yPadding: 15,
+      xPadding: 5,
+      yPadding: 5,
       displayColors: false,
       caretPadding: 10,
     },
     legend: {
       display: false
     },
-    cutoutPercentage: 80,
+    cutoutPercentage: 10,
   },
+
+
+
+
+  
 });
 
 }

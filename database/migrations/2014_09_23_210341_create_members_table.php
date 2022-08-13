@@ -15,50 +15,20 @@ class CreateMembersTable extends Migration
     {
         Schema::create('members', function (Blueprint $table) {
             $table->bigIncrements('id');
-            $table->string('name');            
+            $table->string('name'); 
+            $table->string('last_name')->nullable(); 
             $table->string('email')->unique()->nullable();
             $table->string('phone')->unique()->nullable();
+            $table->string('areacode')->nullable();
             $table->string('nickname')->nullable();
-            $table->string('last_name')->nullable();
             $table->string('photo')->nullable();
             $table->boolean('status')->default(1);   
             $table->softDeletes();
 
             $table->timestamps();
         });
-        DB::table('members')->insert([
-            'name' => 'Raul',
-            'last_name' => 'Hernandez',
-            'phone' => '4422263267',
-            'email' => 'raul@mail.com'
-        ]);  
-        DB::table('members')->insert([
-            'name' => 'Pablo',
-            'last_name' => 'Alcantara',
-            'phone' => '6302561267',
-            'email' => 'pablo@mail.com'
-        ]);  
-
-        DB::table('members')->insert([
-            'name' => 'Abel',
-            'last_name' => 'Hdz',
-            'phone' => '5523659846',
-            'email' => 'abel@mail.com'
-        ]);  
-
-        DB::table('members')->insert([
-            'name' => 'Alfredo',
-            'last_name' => 'Quintana',
-            'phone' => '630123456',
-            'email' => 'fredo@mail.com'
-        ]); 
-        
-        DB::table('members')->insert([
-            'name' => 'Julio',
-            'last_name' => 'Martinez',
-            'phone' => '712451245',
-            'email' => 'julio@mail.com'
-        ]); 
+                    
+            
 
     }
 

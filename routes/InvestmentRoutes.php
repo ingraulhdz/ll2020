@@ -10,7 +10,8 @@ use App\Http\Controllers\InvestmentController;
 
 //investment routes
 
-Route::get('investments', [InvestmentController::class, 'index'])->name('investments.index')->middleware('permission:investments.index');
+Route::get('investments', [InvestmentController::class, 'index'])->name('investments.index');
+//Route::get('investments', [InvestmentController::class, 'index'])->name('investments.index')->middleware('permission:investments.index');
 Route::get('investments/create', [InvestmentController::class, 'create'])->name('investments.create')->middleware('permission:investments.create');
 Route::post('investments', [InvestmentController::class, 'store'])->name('investments.store')->middleware('permission:investments.create');
 Route::get('investments/{investment}/edit', [InvestmentController::class, 'edit'])->name('investments.edit')->middleware('permission:investments.edit');

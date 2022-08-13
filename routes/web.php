@@ -18,6 +18,10 @@ use App\Http\Controllers\ProjectController;
 // use App\Http\Controllers\InvestmentController;
 // use App\Http\Controllers\TicketController;
 
+
+Route::view('/rifa', '/webpage/rifa');
+
+Route::view('/en', '/webpage/en');
 Route::get('/', function () {
     return view('webpage.welcome');
 });
@@ -68,5 +72,4 @@ Route::get('/bk', function () {
 });
 
 
-Route::view('index.html', '/sb-admin/index');
 Route::get('/db', [ProjectController::class, 'index'])->name('index');

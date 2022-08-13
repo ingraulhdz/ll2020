@@ -15,7 +15,8 @@ Route::get('projects/create', [ProjectController::class, 'create'])->name('proje
 Route::post('projects', [ProjectController::class, 'store'])->name('projects.store')->middleware('permission:projects.create');
 Route::get('projects/{project}/edit', [ProjectController::class, 'edit'])->name('projects.edit')->middleware('permission:projects.edit');
 Route::put('projects/{project}', [ProjectController::class, 'update'])->name('projects.update')->middleware('permission:projects.edit');
-Route::get('projects/{project}', [ProjectController::class, 'show'])->name('projects.show')->middleware('permission:projects.show');
+Route::get('projects/{project}', [ProjectController::class, 'show'])->name('projects.show');
+//Route::get('projects/{project}', [ProjectController::class, 'show'])->name('projects.show')->middleware('permission:projects.show');
 Route::delete('projects/{project}', [ProjectController::class, 'destroy'])->name('projects.destroy')->middleware('permission:projects.delete');
 Route::delete('projects/delete/{project}', [ProjectController::class, 'delete'])->name('projects.delete')->middleware('permission:projects.delete');
 Route::get('projects/restore/{project}', [ProjectController::class, 'restore'])->name('projects.restore')->middleware('permission:projects.delete');

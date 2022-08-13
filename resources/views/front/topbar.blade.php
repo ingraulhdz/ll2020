@@ -75,7 +75,7 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
+                                        <div class="small text-gray-500">March  12, 2022</div>
                                         <span class="font-weight-bold">A new monthly report is ready to download!</span>
                                     </div>
                                 </a>
@@ -87,7 +87,7 @@
                                     </div>
                                     <div>
                                         <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
+                                        $290.29 has been donated to centro Project
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">

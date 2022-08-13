@@ -12,7 +12,7 @@
               <li data-filter="*" class="filter-active">Todo</li>
               <li data-filter=".filter-app">Paisajes</li>
               <li data-filter=".filter-card">Proyectos</li>
-              <li data-filter=".filter-web">Web</li>
+              <li data-filter=".filter-web">Events</li>
             </ul>
           </div>
         </div>
