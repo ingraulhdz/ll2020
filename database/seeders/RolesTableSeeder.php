@@ -60,11 +60,7 @@ class RolesTableSeeder extends Seeder
                     'name' => 'treasurer',
                     'description' => 'Can manage donations',
                     'front_name' => 'Treasure',
-                    ]);
-                
-
-                 
-                
+                    ]);    
                         
                         
          //User Admin
