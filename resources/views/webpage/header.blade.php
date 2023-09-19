@@ -7,11 +7,11 @@
       <nav id="navbar" class="navbar order-last order-lg-0">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Home</a></li>
-          <li><a class="nav-link scrollto" href="#about">Acerca de</a></li>
+          <li><a class="nav-link scrollto" href="#about">About</a></li>
           <li><a class="nav-link scrollto" href="#services">La Loma</a></li>
-          <li><a class="nav-link scrollto " href="#portfolio">Galeria</a></li>
-          <li><a class="nav-link scrollto" href="#proyectos">Proyectos</a></li>
-          <li><a class="nav-link scrollto" href="#mensualidades">Mensualidades</a></li>
+          <li><a class="nav-link scrollto " href="#portfolio">Gallery</a></li>
+          <li><a class="nav-link scrollto" href="#proyectos">Projects</a></li>
+          <li><a class="nav-link scrollto" href="#mensualidades">Plans</a></li>
           <!-- <li class="dropdown"><a href="#"><span>Drop Down</span> <i class="bi bi-chevron-down"></i></a>
             <ul>
               <li><a href="#">Drop Down 1</a></li>
@@ -30,7 +30,6 @@
             </ul>
           </li> -->
           <li><a class="nav-link scrollto" href="#contact">Contact</a></li>
-          <li><a class="nav-link scrollto " href="/rifa">RIFA</a></li>
 
           @if (Route::has('login'))
                                 @auth
@@ -41,7 +40,7 @@
 
                                 @else
                                   
-                                <li><a class="nav-link scrollto " href="{{ route('login') }}">Iniciar Sesion</a></li>
+                                <li><a class="nav-link scrollto " href="{{ route('login') }}">Log in</a></li>
                                 
 
 
@@ -61,7 +60,7 @@
 
           <form action="https://www.paypal.com/donate" method="post" target="_top">
       <input type="hidden" name="hosted_button_id" value="ZK6LQ6HWURELW" />
-      <button class="btn btn-primary btn-md" type="submit"><i class="bi bi-heart-fill"></i> Donar </button>
+      <button class="btn btn-primary btn-md" type="submit"><i class="bi bi-heart-fill"></i> Donate now </button>
     </form>
 
 
