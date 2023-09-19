@@ -8,6 +8,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\WelcomeController;
 use App\Http\Controllers\HomeController;
 
 
@@ -27,7 +28,7 @@ Route::view('/en', '/webpage/en');
 //     return view('webpage.welcome');
 // });
 
-Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
+Route::get('/', [WelcomeController::class, 'welcome'])->name('welcome');
 
 Route::get('/mitest', [ProjectController::class, 'mitest'])->name('mitest');
 
