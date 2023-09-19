@@ -8,6 +8,7 @@ use App\Http\Controllers\RoleController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\PermissionController;
 use App\Http\Controllers\ProjectController;
+use App\Http\Controllers\HomeController;
 
 
 // use App\Http\Controllers\ProjectController;
@@ -22,9 +23,12 @@ use App\Http\Controllers\ProjectController;
 Route::view('/rifa', '/webpage/rifa');
 
 Route::view('/en', '/webpage/en');
-Route::get('/', function () {
-    return view('webpage.welcome');
-});
+// Route::get('/', function () {
+//     return view('webpage.welcome');
+// });
+
+Route::get('/', [HomeController::class, 'welcome'])->name('welcome');
+
 Route::get('/mitest', [ProjectController::class, 'mitest'])->name('mitest');
 
 Auth::routes();

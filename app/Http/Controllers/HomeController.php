@@ -28,6 +28,14 @@ class HomeController extends Controller
      *
      * @return \Illuminate\Contracts\Support\Renderable
      */
+    public function welcome()
+    {
+        $project = Project::find(2);
+
+
+        return view('webpage.welcome', compact('project'));
+    }
+
     public function index()
     {
         return view('home');

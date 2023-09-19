@@ -2,7 +2,6 @@
 
 @section('content')
 
-
   <!-- ======= Header ======= -->
   @include('webpage.header')
 
