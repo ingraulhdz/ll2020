@@ -29,7 +29,7 @@
                                         </div>
                                         <div class="col-auto">
                                         <a href="{{route('monitor')}}" class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm"><i
-                                class="fas fa-desktop fa-sm text-white-50"></i> Monitorear</a>
+                                class="fas fa-desktop fa-sm text-white-50"></i> Live charts</a>
                                         </div>
                                     </div>
                                 </div>
@@ -51,7 +51,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
-                                                Proyectos </div>
+                                                Projects </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$projects->count()}}</div>
                                         </div>
                                         <div class="col-auto">
@@ -69,7 +69,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                                                Miembros </div>
+                                                Members </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800">{{$members->count()}}</div>
                                         </div>
                                         <div class="col-auto">
@@ -87,7 +87,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-info text-uppercase mb-1">
-                                                Total Donado </div>
+                                                Total collected </div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"> $ {{number_format($donations->sum('amount'))}}</div>
                                         </div>
                                         <div class="col-auto">
@@ -105,7 +105,7 @@
                                     <div class="row no-gutters align-items-center">
                                         <div class="col mr-2">
                                             <div class="text-xs font-weight-bold text-warning text-uppercase mb-1">
-                                                Total Invertido</div>
+                                                Total Invested</div>
                                             <div class="h5 mb-0 font-weight-bold text-gray-800"> $ {{number_format($investments->sum('amount'))}}</div>
                                         </div>
                                         <div class="col-auto">
@@ -132,7 +132,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Donaciones</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Donations</h6>
                                     <div class="dropdown no-arrow">
                                         <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -140,10 +140,10 @@
                                         </a> 
                                      <div class="dropdown-menu dropdown-menu-right shadow animated--fade-in"
                                             aria-labelledby="dropdownMenuLink">
-                                            <div class="dropdown-header">Ver por :</div>
-                                            <a class="dropdown-item" href="#">Años</a>
-                                            <a class="dropdown-item" href="#">Meses</a>
-                                            <a class="dropdown-item" href="#">Ultimos Dias</a>
+                                            <div class="dropdown-header">filter by :</div>
+                                            <a class="dropdown-item" href="#">Year</a>
+                                            <a class="dropdown-item" href="#">Month</a>
+                                            <a class="dropdown-item" href="#">last  7 Days</a>
                                          
                                         </div> 
                                     </div>
@@ -167,7 +167,7 @@
                                 <!-- Card Header - Dropdown -->
                                 <div
                                     class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
-                                    <h6 class="m-0 font-weight-bold text-primary">Distribucion de las Inversiones</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Investment Distribution</h6>
                                     <div class="dropdown no-arrow">
                                         <!-- <a class="dropdown-toggle" href="#" role="button" id="dropdownMenuLink"
                                             data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -217,7 +217,7 @@
                             
                             <div class="card shadow mb-4">
                                 <div class="card-header py-3">
-                                    <h6 class="m-0 font-weight-bold text-primary">Avance de Proyectos</h6>
+                                    <h6 class="m-0 font-weight-bold text-primary">Projects Advance</h6>
                                 </div>
                                 <div class="card-body">
                                 <h4 class="small font-weight-bold"><label id="p1text"></label><span
@@ -259,7 +259,7 @@
                         <div class="card shadow mb-4">
                             <div class="card-header py-3">
                                 <h6 class="m-0 font-weight-bold text-primary">
-                                    Mejores Donaciones
+                                    Top Donations
                                 </h6>
                             </div>
                             <div class="card-body">

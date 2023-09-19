@@ -31,9 +31,9 @@
                                 <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                        <th>Donador</th>
-                                        <th>Cantidad</th>
-                                        <th>Proyecto</th>
+                                        <th>Donor</th>
+                                        <th>Amount</th>
+                                        <th>Project</th>
                                           
                                             <th>Options</th>
                                         </tr>

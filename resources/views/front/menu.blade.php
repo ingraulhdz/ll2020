@@ -15,7 +15,7 @@
                                                 
 
                         <a class="collapse-item"  href="{{ route('users.index')}}"> <i class='fas fa-fw fa-id-card'></i> Users</a>
-                        <a class="collapse-item"  href="{{ route('roles.index')}}">  <i class='fas fa-fw fa-sitemap'></i>Roles</a>
+                        <a class="collapse-item"  href="{{ route('roles.index')}}">  <i class='fas fa-fw fa-sitemap'></i>Rols</a>
                         <a class="collapse-item"  href="{{ route('permissions.index')}}"> <i class='fas fa-fw fa-list'></i> Permissions</a>
                     </div>
                 </div>
@@ -25,28 +25,28 @@
 <li class='nav-item'>
                 <a class='nav-link' href="{{ route('accounts.index')}}">
                     <i class='fas fa-fw fa-credit-card'></i>
-                    <span>Cuentas</span></a>
+                    <span>Accounts</span></a>
             </li>
             
 
             <li class='nav-item'>
                 <a class='nav-link' href="{{ route('donations.index')}}">
                     <i class='fas fa-fw fa-donate'></i>
-                    <span>Donaciones</span></a>
+                    <span>Donations</span></a>
             </li>
             
 
             <li class='nav-item'>
                 <a class='nav-link' href="{{ route('investments.index')}}">
                     <i class='fas fa-fw fa-arrow-circle-down'></i>
-                    <span>Gastos</span></a>
+                    <span>Expenses</span></a>
             </li>
             
 
             <li class='nav-item'>
                 <a class='nav-link' href="{{ route('members.index')}}">
                     <i class='fas fa-fw fa-users'></i>
-                    <span>Miembros</span></a>
+                    <span>Members</span></a>
             </li>
             
 
@@ -54,7 +54,7 @@
 <li class='nav-item'>
                 <a class='nav-link' href="/db">
                     <i class='fas fa-fw fa-briefcase'></i>
-                    <span>Proyectos</span></a>
+                    <span>Projects</span></a>
             </li>
             
 
@@ -68,6 +68,6 @@
             <li class='nav-item'>
                 <a class='nav-link' href="{{ route('registros.index')}}">
                     <i class='fas fa-fw fa-cubes'></i>
-                    <span>Inventario</span></a>
+                    <span>Inventory</span></a>
             </li>
             

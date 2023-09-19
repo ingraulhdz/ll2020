@@ -31,10 +31,10 @@
   {!! $errors->first('amount','<div class="invalid-feedback">:message        </div>') !!}
   
 
-  <small for="inlineFormInputGroup">Donador</small>
+  <small for="inlineFormInputGroup">Donor</small>
 
   <select id="supporter_id" name="supporter_id" class="form-control @if ($errors->any()) {{$errors->has('amount') ? 'is-invalid':'is-valid'}} @endif" >
-                        <option value=""  >Selecciona un Donador</option>
+                        <option value=""  >Select Donor</option>
 
  @foreach(App\Member::get() as $item)
         <option value="{{$item->id}}">{{ $item->fullName() }} | <small>{{$item->nickname}}</small></option>
@@ -45,10 +45,10 @@
 
 
 
-<small for="inlineFormInputGroup">Cuenta</small>
+<small for="inlineFormInputGroup">Account</small>
 
   <select id="account_id" name="account_id" class="form-control @if ($errors->any()) {{$errors->has('account_id') ? 'is-invalid':'is-valid'}} @endif" >
-                        <option value=""  >Selecciona una cuenta</option>
+                        <option value=""  >Select account </option>
 
  @foreach(App\Models\Account::get() as $item)
         <option value="{{$item->id}}">{{ $item->owner }} | {{ $item->country}} </option>
@@ -71,7 +71,7 @@
                         <span class="icon text-white-50">
                             <i class="fas fa-save"></i>
                         </span>
-                        <span class="text">Guardar</span>
+                        <span class="text">Save</span>
                     </button>
 
 

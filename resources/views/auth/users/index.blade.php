@@ -19,7 +19,7 @@
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
-                        <span class="text">Agregar</span>
+                        <span class="text">Add</span>
                     </a>
 @endcan
 
@@ -27,7 +27,7 @@
                         <span class="icon text-white-50">
                             <i class="fas fa-arrow-left"></i>
                         </span>
-                        <span class="text">{{__('Assignar')}}</span>
+                        <span class="text">{{__('Assign')}}</span>
                     </a>
 <a href="/home" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-primary btn-icon-split">
                         <span class="icon text-white-50">
@@ -45,9 +45,9 @@
                                     
                   <thead>
                     <tr>
-                      <th>Nombre</th>
+                      <th>Name</th>
                       <th>E-mail</th>
-                      <th>user name</th>
+                      <th>username</th>
                       <th>Rol</th>
                       <th>Status</th>
                       <th>Options</th>

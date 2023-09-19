@@ -17,7 +17,7 @@
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
                             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                                <h6 class="h3 mb-0 font-weight-bold text-primary">permissions</h6>
+                                <h6 class="h3 mb-0 font-weight-bold text-primary">Permissions</h6>
                                
                                 <!-- <a href="{{route('permissions.create')}}" class="  d-sm-inline-block  btn-sm  shadow-sm btn btn-success btn-icon-split">
                         <span class="icon text-white-50">
@@ -53,12 +53,12 @@
                                 <td width="10px">
                                     <a href="{{ route('permissions.show', $permission->id) }}" 
                                     class="btn btn-sm btn-success">
-                                        ver
+                                        show
                                     </a>
 
                                     <a href="{{ route('permissions.edit', $permission->id) }}" 
                                     class="btn btn-sm btn-primary">
-                                        editar
+                                        edit
                                     </a>
                                 </td>
 

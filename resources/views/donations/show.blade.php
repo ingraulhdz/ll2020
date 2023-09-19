@@ -30,7 +30,7 @@
   <div class="modal-dialog modal-dialog-centered" role="document">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLongTitle">Comprobante</h5>
+        <h5 class="modal-title" id="exampleModalLongTitle">Voucher</h5>
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
@@ -51,14 +51,14 @@
 <b>Information</b>		 
 		<ul >
     <li ><b>Supporter: </b>{{$donation->supporter->fullname()}} </li>
-    <li ><b>Proyecto: </b>{{$donation->project->name}}</li>
-	<li ><b>Cantidad: </b>$ {{number_format($donation->amount)}} MXN</li>
+    <li ><b>Project: </b>{{$donation->project->name}}</li>
+	<li ><b>Amount: </b>$ {{number_format($donation->amount)}} MXN</li>
     <li ><b>Account Owner: </b>{{$donation->account->owner}}</li>
     <li ><b>Account Country: </b>{{$donation->account->country}}</li>
-	<li ><b>Fecha: </b>{{Carbon\Carbon::parse($donation->created_at)->locale('es_MX')->isoFormat('LLLL')}}</li>
+	<li ><b>Date: </b>{{Carbon\Carbon::parse($donation->created_at)->locale('es_MX')->isoFormat('LLLL')}}</li>
 
     <li>   <button type="button" class="btn btn-primary btn-sm " data-toggle="modal" data-target="#exampleModalCenter">
-  Ver Comprobante
+  Show Voucher
 </button>   </li>
 		  </ul>
 

@@ -24,7 +24,7 @@
                         <span class="icon text-white-50">
                             <i class="fas fa-plus"></i>
                         </span>
-                        <span class="text">Agregar</span>
+                        <span class="text">Add</span>
                     </a>
 
                             </div>
@@ -35,8 +35,7 @@
                                     <thead>
                                         <tr>
                                         <th>Name</th>
-                                        <th>Name</th>
-                                        <th>Name</th>
+                                        <th>Phone</th>
                                            
                                             <th>Options</th>
                                         </tr>
@@ -49,7 +48,6 @@
                  
                                         <td><a href="{{ route('members.show', $member)}}" >{{$member->fullName()}}</a></td>
                       <td>{{$member->phone}}</td>
-                      <td>{{$member->email}}</td>
                                             <td>
                            
 <form action="{{route('members.destroy', $member)}}" method="POST">
